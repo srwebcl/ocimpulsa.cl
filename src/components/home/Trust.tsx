@@ -1,6 +1,7 @@
 import React from "react";
 import { Section } from "../ui/Section";
 import { MessageSquareQuote, ShieldCheck, TrendingUp } from "lucide-react";
+import { FadeIn } from "../ui/motion/FadeIn";
 
 export const Trust = () => {
     const benefits = [
@@ -39,33 +40,36 @@ export const Trust = () => {
             </div>
 
             <div className="text-center mb-16 relative z-10">
-                <span className="text-[#CCA43B] font-bold tracking-widest uppercase text-sm mb-3 block">
-                    Nuestra Filosofía
-                </span>
-                <h2 className="text-3xl lg:text-5xl font-bold text-[#202f43] mb-6">
-                    ¿Por qué <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CCA43B] to-[#b48d28]">OC Impulsa</span>?
-                </h2>
-                <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                    Claridad que impulsa. Rompemos el molde del contador tradicional.
-                </p>
+                <FadeIn direction="up">
+                    <span className="text-[#CCA43B] font-bold tracking-widest uppercase text-sm mb-3 block">
+                        Nuestra Filosofía
+                    </span>
+                    <h2 className="text-3xl lg:text-5xl font-bold text-[#202f43] mb-6">
+                        ¿Por qué <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CCA43B] to-[#b48d28]">OC Impulsa</span>?
+                    </h2>
+                    <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                        Claridad que impulsa. Rompemos el molde del contador tradicional.
+                    </p>
+                </FadeIn>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 relative z-10">
                 {benefits.map((benefit, index) => (
-                    <div
-                        key={index}
-                        className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#CCA43B]/30 hover:-translate-y-1"
-                    >
-                        <div className="h-16 w-16 bg-[#202f43]/5 text-[#CCA43B] rounded-2xl flex items-center justify-center mb-6 border border-[#CCA43B]/20 group-hover:bg-[#202f43] group-hover:border-[#202f43] transition-all duration-300">
-                            <benefit.icon size={32} />
+                    <FadeIn key={index} delay={index * 0.2} direction="up" fullWidth>
+                        <div
+                            className="group bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#CCA43B]/30 hover:-translate-y-1 h-full"
+                        >
+                            <div className="h-16 w-16 bg-[#202f43]/5 text-[#CCA43B] rounded-2xl flex items-center justify-center mb-6 border border-[#CCA43B]/20 group-hover:bg-[#202f43] group-hover:border-[#202f43] transition-all duration-300">
+                                <benefit.icon size={32} />
+                            </div>
+                            <h3 className="text-xl font-bold text-[#202f43] mb-3 group-hover:text-[#CCA43B] transition-colors">
+                                {benefit.title}
+                            </h3>
+                            <p className="text-gray-600 leading-relaxed">
+                                {benefit.description}
+                            </p>
                         </div>
-                        <h3 className="text-xl font-bold text-[#202f43] mb-3 group-hover:text-[#CCA43B] transition-colors">
-                            {benefit.title}
-                        </h3>
-                        <p className="text-gray-600 leading-relaxed">
-                            {benefit.description}
-                        </p>
-                    </div>
+                    </FadeIn>
                 ))}
             </div>
         </Section>

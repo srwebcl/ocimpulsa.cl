@@ -4,6 +4,7 @@ import React from "react";
 import { HeroForm } from "./HeroForm";
 import { CheckCircle2, ShieldCheck, Clock, FileCheck, Users, Receipt, Laptop } from "lucide-react";
 import { Section } from "../ui/Section";
+import { FadeIn } from "../ui/motion/FadeIn";
 
 export const WhyUs = () => {
     const benefits = [
@@ -49,38 +50,44 @@ export const WhyUs = () => {
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
                     {/* Left Column: Content */}
                     <div className="space-y-10">
-                        <div className="space-y-6">
-                            <span className="text-[#CCA43B] font-bold tracking-widest uppercase text-sm">
-                                ¿Por qué elegirnos?
-                            </span>
-                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#202f43] mb-6 leading-tight">
-                                Más que contadores, somos tus <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CCA43B] to-[#b48d28]">aliados estratégicos.</span>
-                            </h2>
-                            <p className="text-gray-600 text-lg leading-relaxed">
-                                Nos encargamos de todo lo aburrido y complejo de la contabilidad para que tú te dediques a lo que mejor sabes hacer: <strong>hacer crecer tu negocio.</strong>
-                            </p>
-                        </div>
+                        <FadeIn direction="right">
+                            <div className="space-y-6">
+                                <span className="text-[#CCA43B] font-bold tracking-widest uppercase text-sm">
+                                    ¿Por qué elegirnos?
+                                </span>
+                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#202f43] mb-6 leading-tight">
+                                    Más que contadores, somos tus <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CCA43B] to-[#b48d28]">aliados estratégicos.</span>
+                                </h2>
+                                <p className="text-gray-600 text-lg leading-relaxed">
+                                    Nos encargamos de todo lo aburrido y complejo de la contabilidad para que tú te dediques a lo que mejor sabes hacer: <strong>hacer crecer tu negocio.</strong>
+                                </p>
+                            </div>
+                        </FadeIn>
 
                         <div className="grid sm:grid-cols-2 gap-6">
                             {benefits.map((benefit, index) => (
-                                <div key={index} className="flex gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100">
-                                    <div className="shrink-0 mt-1">
-                                        {benefit.icon}
+                                <FadeIn key={index} delay={index * 0.1} direction="up" fullWidth>
+                                    <div className="flex gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100 h-full">
+                                        <div className="shrink-0 mt-1">
+                                            {benefit.icon}
+                                        </div>
+                                        <div>
+                                            <h4 className="text-[#202f43] font-bold text-lg">{benefit.title}</h4>
+                                            <p className="text-gray-500 text-sm leading-relaxed mt-1">
+                                                {benefit.description}
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h4 className="text-[#202f43] font-bold text-lg">{benefit.title}</h4>
-                                        <p className="text-gray-500 text-sm leading-relaxed mt-1">
-                                            {benefit.description}
-                                        </p>
-                                    </div>
-                                </div>
+                                </FadeIn>
                             ))}
                         </div>
                     </div>
 
                     {/* Right Column: Sticky Form */}
                     <div className="w-full max-w-md lg:ml-auto lg:sticky lg:top-28 lg:mt-9">
-                        <HeroForm className="!bg-[#202f43] shadow-2xl border-gray-800" />
+                        <FadeIn direction="left" delay={0.2}>
+                            <HeroForm className="!bg-[#202f43] shadow-2xl border-gray-800" />
+                        </FadeIn>
                     </div>
                 </div>
             </div>

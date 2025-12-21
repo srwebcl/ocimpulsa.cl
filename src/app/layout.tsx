@@ -5,21 +5,14 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/conversion/WhatsAppButton";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
+import { SmartWhatsAppBtn } from "@/components/ui/SmartWhatsAppBtn";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-  display: "swap",
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
-  title: "OC Impulsa | Claridad que Impulsa",
-  description: "Asesoría contable, laboral y digital para PYMEs en Chile. Sin enredos, sin multas. Déjate ayudar por expertos.",
+  title: "OC Impulsa | Asesoría Contable y Tributaria",
+  description: "Servicios contables, tributarios y laborales para Pymes en Chile.",
 };
 
 export default function RootLayout({
@@ -29,14 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body
-        className={`${inter.variable} ${outfit.variable} antialiased font-sans text-gray-900 bg-background`}
-        suppressHydrationWarning={true}
-      >
+      <body className={`${inter.variable} ${outfit.variable} font-sans antialiased`} suppressHydrationWarning>
         <Header />
         {children}
         <Footer />
-        <WhatsAppButton />
+        <SmartWhatsAppBtn />
       </body>
     </html>
   );
