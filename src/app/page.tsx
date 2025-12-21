@@ -8,8 +8,8 @@ export default function Home() {
     <main className="min-h-screen flex flex-col bg-background">
       <Hero />
       <WhyUs />
-      <Trust />
       <ServicesPreview />
+      <Trust />
 
       {/* Additional CTA Section before Footer */}
       <section className="bg-primary py-16 text-center text-white">
