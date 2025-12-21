@@ -44,7 +44,7 @@ export const ServicesPreview = () => {
     ];
 
     return (
-        <Section className="py-20 lg:py-28 bg-[#0F2027] relative overflow-visible">
+        <Section className="py-20 lg:py-28 bg-gradient-to-b from-[#202f43] to-[#15202b] relative overflow-visible">
             <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#CCA43B_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
 
             <div className="container mx-auto px-4 relative z-10">
@@ -70,7 +70,7 @@ export const ServicesPreview = () => {
                                 }`}
                         >
                             {stage.highlight && (
-                                <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#CCA43B] text-[#0F2027] text-xs font-bold px-6 py-2 rounded-full tracking-widest uppercase shadow-lg border-2 border-[#0F2027]">
+                                <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#CCA43B] text-[#202f43] text-xs font-bold px-6 py-2 rounded-full tracking-widest uppercase shadow-lg border-2 border-[#202f43]">
                                     Más Popular
                                 </div>
                             )}
@@ -80,10 +80,10 @@ export const ServicesPreview = () => {
                             </div>
 
                             <div className="mb-4">
-                                <h3 className="text-2xl font-bold text-[#0F2027] group-hover:text-[#CCA43B] transition-colors">
+                                <h3 className="text-2xl font-bold text-[#202f43] group-hover:text-[#CCA43B] transition-colors">
                                     {stage.title}
                                 </h3>
-                                <p className="text-[#0F2027]/70 font-medium uppercase tracking-wide text-sm mt-1">
+                                <p className="text-[#202f43]/70 font-medium uppercase tracking-wide text-sm mt-1">
                                     {stage.subtitle}
                                 </p>
                             </div>
@@ -93,7 +93,7 @@ export const ServicesPreview = () => {
                             </p>
 
                             <div className="mb-8 pt-6 border-t border-gray-100">
-                                <p className="text-4xl font-bold text-[#0F2027] tracking-tight">{stage.price}</p>
+                                <p className="text-4xl font-bold text-[#202f43] tracking-tight">{stage.price}</p>
                                 <p className="text-sm text-gray-400 mt-1 font-medium">{stage.priceDetail}</p>
                             </div>
 
@@ -101,8 +101,8 @@ export const ServicesPreview = () => {
                                 variant={stage.highlight ? "primary" : "outline"}
                                 href={stage.href}
                                 className={`w-full justify-between h-12 text-sm uppercase tracking-wide ${stage.highlight
-                                        ? "bg-[#0F2027] text-white hover:bg-[#1a2f38] border-none"
-                                        : "border-gray-200 text-[#0F2027] hover:border-[#CCA43B] hover:text-[#CCA43B]"
+                                        ? "bg-[#202f43] text-white hover:bg-[#15202b] border-none"
+                                        : "border-gray-200 text-[#202f43] hover:border-[#CCA43B] hover:text-[#CCA43B]"
                                     }`}
                             >
                                 {stage.cta}

@@ -73,7 +73,7 @@ export const Header = () => {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="md:hidden absolute top-20 left-0 w-full bg-[#0F2027] border-b border-gray-800 shadow-xl py-6 animate-in slide-in-from-top-4">
+                <div className="md:hidden absolute top-20 left-0 w-full bg-[#202f43] border-b border-gray-800 shadow-xl py-6 animate-in slide-in-from-top-4">
                     <div className="flex flex-col container mx-auto px-4 gap-4">
                         {navigation.map((item) => (
                             <Link

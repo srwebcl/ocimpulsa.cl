@@ -14,28 +14,19 @@ export default function FormalizaPage() {
             {/* Hero Section */}
             <Section className="bg-[#F4F1EA]">
                 <div className="max-w-4xl mx-auto text-center space-y-6">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0F2027]/5 border border-[#0F2027]/10 mb-4">
-                        <ShieldCheck className="w-4 h-4 text-[#0F2027]" />
-                        <span className="text-[#0F2027] text-xs font-bold tracking-widest uppercase">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#202f43]/5 border border-[#202f43]/10 mb-4">
+                        <ShieldCheck className="w-4 h-4 text-[#202f43]" />
+                        <span className="text-[#202f43] text-xs font-bold tracking-widest uppercase">
                             Todo listo en 24 horas
                         </span>
                     </div>
 
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0F2027]">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#202f43]">
                         Formaliza tu Negocio
                     </h1>
 
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                        Deja la burocracia en nuestras manos. Obten tu RUT, inicio de actividades y facturación electrónica sin errores.
-                    </p>
-
-                    <div className="py-6">
-                        <span className="block text-sm text-gray-500 font-medium uppercase tracking-wider mb-2">Valor Único</span>
-                        <span className="text-5xl font-bold text-[#CCA43B]">$150.000</span>
-                    </div>
-
                     <div className="flex justify-center gap-4">
-                        <Button size="lg" className="bg-[#0F2027] text-white hover:bg-[#1B2A41] px-8 py-6 text-lg" href="https://wa.me/56912345678?text=Hola,%20quiero%20formalizar%20mi%20empresa">
+                        <Button size="lg" className="bg-[#202f43] text-white hover:bg-[#15202b] px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300" href="https://wa.me/56912345678?text=Hola,%20quiero%20formalizar%20mi%20empresa">
                             Comenzar Trámite
                             <ArrowRight className="ml-2 h-5 w-5" />
                         </Button>
@@ -49,7 +40,7 @@ export default function FormalizaPage() {
 
                     {/* What's Included */}
                     <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100/50">
-                        <h3 className="text-2xl font-bold text-[#0F2027] mb-8 flex items-center gap-3">
+                        <h3 className="text-2xl font-bold text-[#202f43] mb-8 flex items-center gap-3">
                             <span className="w-8 h-8 rounded-full bg-[#CCA43B]/20 flex items-center justify-center text-[#CCA43B] text-sm font-bold">✓</span>
                             ¿Qué incluye?
                         </h3>
@@ -72,10 +63,10 @@ export default function FormalizaPage() {
 
                     {/* Digital Upgrade Option */}
                     <div className="space-y-8">
-                        <div className="bg-[#0F2027] text-white p-8 rounded-2xl shadow-2xl relative overflow-hidden group">
+                        <div className="bg-gradient-to-br from-[#202f43] to-[#15202b] text-white p-8 rounded-2xl shadow-2xl relative overflow-hidden group border border-[#CCA43B]/20">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-[#CCA43B] rounded-full blur-[60px] opacity-20 group-hover:opacity-30 transition-opacity"></div>
 
-                            <span className="inline-block bg-[#CCA43B] text-[#0F2027] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
+                            <span className="inline-block bg-[#CCA43B] text-[#202f43] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
                                 Recomendado
                             </span>
 
@@ -95,7 +86,7 @@ export default function FormalizaPage() {
                         </div>
 
                         <div className="p-6 bg-[#FFFFFF] rounded-xl border border-gray-200">
-                            <h4 className="font-bold text-[#0F2027] mb-2">¿Por qué con nosotros?</h4>
+                            <h4 className="font-bold text-[#202f43] mb-2">¿Por qué con nosotros?</h4>
                             <p className="text-sm text-gray-600">
                                 Porque somos contadores, no solo llenadores de formularios. Te estructuramos para que crezcas ordenado y sin multas futuras.
                             </p>

@@ -11,7 +11,7 @@ interface HeroFormProps {
 
 export const HeroForm = ({ className }: HeroFormProps) => {
     return (
-        <div className={cn("bg-[#0F2027]/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl animate-in slide-in-from-right-8 duration-1000 ring-1 ring-white/5", className)}>
+        <div className={cn("bg-[#202f43]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl animate-in slide-in-from-right-8 duration-1000 ring-1 ring-white/5", className)}>
             <div className="mb-5 text-center">
                 <h3 className="text-2xl font-bold text-white tracking-tight mb-1">
                     Agenda tu Diagnóstico
@@ -27,21 +27,21 @@ export const HeroForm = ({ className }: HeroFormProps) => {
                 <input
                     type="text"
                     placeholder="Nombre completo"
-                    className="w-full px-4 py-3 rounded-lg bg-[#0F2027]/40 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all text-sm hover:border-white/20"
+                    className="w-full px-4 py-3 rounded-lg bg-[#15202b]/60 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all text-sm hover:border-white/20"
                     required
                 />
 
                 <input
                     type="email"
                     placeholder="Correo corporativo"
-                    className="w-full px-4 py-3 rounded-lg bg-[#0F2027]/40 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all text-sm hover:border-white/20"
+                    className="w-full px-4 py-3 rounded-lg bg-[#15202b]/60 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all text-sm hover:border-white/20"
                     required
                 />
 
                 <input
                     type="tel"
                     placeholder="Teléfono móvil"
-                    className="w-full px-4 py-3 rounded-lg bg-[#0F2027]/40 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all text-sm hover:border-white/20"
+                    className="w-full px-4 py-3 rounded-lg bg-[#15202b]/60 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all text-sm hover:border-white/20"
                     required
                 />
 
@@ -50,17 +50,17 @@ export const HeroForm = ({ className }: HeroFormProps) => {
                     <input
                         type="text"
                         placeholder="RUT Empresa"
-                        className="w-full px-4 py-3 rounded-lg bg-[#0F2027]/40 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all text-sm hover:border-white/20"
+                        className="w-full px-4 py-3 rounded-lg bg-[#15202b]/60 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all text-sm hover:border-white/20"
                     />
                     <div className="relative">
                         <select
-                            className="w-full px-4 py-3 rounded-lg bg-[#0F2027]/40 border border-white/10 text-white text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all appearance-none hover:border-white/20 cursor-pointer"
+                            className="w-full px-4 py-3 rounded-lg bg-[#15202b]/60 border border-white/10 text-white text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all appearance-none hover:border-white/20 cursor-pointer"
                         >
-                            <option value="" className="bg-[#0F2027] text-gray-400">Servicio</option>
-                            <option value="contabilidad" className="bg-[#0F2027]">Contabilidad</option>
-                            <option value="formalizacion" className="bg-[#0F2027]">Formalización</option>
-                            <option value="tributaria" className="bg-[#0F2027]">Tributaria</option>
-                            <option value="laboral" className="bg-[#0F2027]">Laboral</option>
+                            <option value="" className="bg-[#202f43] text-gray-400">Servicio</option>
+                            <option value="contabilidad" className="bg-[#202f43]">Contabilidad</option>
+                            <option value="formalizacion" className="bg-[#202f43]">Formalización</option>
+                            <option value="tributaria" className="bg-[#202f43]">Tributaria</option>
+                            <option value="laboral" className="bg-[#202f43]">Laboral</option>
                         </select>
                     </div>
                 </div>
@@ -70,7 +70,7 @@ export const HeroForm = ({ className }: HeroFormProps) => {
                     <textarea
                         placeholder="Mensaje (Opcional)"
                         rows={1}
-                        className="w-full px-4 py-3 rounded-lg bg-[#0F2027]/40 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all resize-none text-sm hover:border-white/20"
+                        className="w-full px-4 py-3 rounded-lg bg-[#15202b]/60 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all resize-none text-sm hover:border-white/20"
                     ></textarea>
                 </div>
 

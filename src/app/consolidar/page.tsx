@@ -47,7 +47,7 @@ export default function ConsolidarPage() {
             <Section className="bg-[#F4F1EA]">
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <span className="text-[#CCA43B] font-bold tracking-wide uppercase text-sm mb-2 block">Etapa 3: Consolidar</span>
-                    <h1 className="text-4xl md:text-5xl font-bold text-[#0F2027] mb-6">Servicios Especializados</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold text-[#202f43] mb-6">Servicios Especializados</h1>
                     <p className="text-xl text-gray-600">
                         Soluciones a medida para momentos clave. No dejes cabos sueltos en tu negocio.
                     </p>
@@ -56,15 +56,15 @@ export default function ConsolidarPage() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl mx-auto">
                     {services.map((service) => (
                         <div key={service.title} className="bg-white p-8 rounded-2xl transition-all duration-300 border border-gray-100/50 shadow-sm hover:shadow-xl hover:border-[#CCA43B]/30 group">
-                            <div className="h-12 w-12 bg-[#0F2027] text-[#CCA43B] rounded-xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">
+                            <div className="h-12 w-12 bg-[#202f43] text-[#CCA43B] rounded-xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">
                                 <service.icon size={24} />
                             </div>
-                            <h3 className="text-xl font-bold text-[#0F2027] mb-3">{service.title}</h3>
+                            <h3 className="text-xl font-bold text-[#202f43] mb-3">{service.title}</h3>
                             <p className="text-gray-600 mb-6 text-sm leading-relaxed">{service.description}</p>
                             <Button
                                 variant="outline"
                                 size="sm"
-                                className="w-full border-gray-200 text-[#0F2027] hover:border-[#CCA43B] hover:text-[#CCA43B]"
+                                className="w-full border-gray-200 text-[#202f43] hover:border-[#CCA43B] hover:text-[#CCA43B]"
                                 href="https://wa.me/56912345678"
                             >
                                 Consultar

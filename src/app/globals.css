@@ -8,8 +8,11 @@
   /* Slate 900 for text */
 
   /* Brand Colors */
-  --navy: #0F2027;
-  /* Deep Corporate Navy */
+  /* Brand Colors */
+  --navy: #202f43;
+  /* Official Corporate Blue */
+  --navy-dark: #15202b;
+  /* Darker shade for gradients */
   --gold: #CCA43B;
   /* Metallic Gold */
   --gold-light: #E5C568;
@@ -19,7 +22,7 @@
 
   /* Gradients */
   --gold-gradient: linear-gradient(to right, #f4bf6a 0%, #d29e4a 20%, #bb8833 40%, #ffff81 70%, #905c00 100%);
-  --navy-gradient: linear-gradient(to right, #0F2027, #203A43, #2C5364);
+  --navy-gradient: linear-gradient(to bottom, #202f43, #15202b);
 
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-display: var(--font-outfit), system-ui, sans-serif;

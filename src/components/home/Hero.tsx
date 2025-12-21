@@ -22,14 +22,14 @@ export const Hero = () => {
                     <source src="/images/hero-video.mp4" type="video/mp4" />
                 </video>
                 {/* Gradient Overlay for Text Readability - Corporate Navy tint */}
-                <div className="absolute inset-0 bg-[#0F2027]/80 mix-blend-multiply"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F2027] via-transparent to-[#0F2027]/40"></div>
+                <div className="absolute inset-0 bg-[#202f43]/80 mix-blend-multiply"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#202f43] via-transparent to-[#202f43]/40"></div>
             </div>
 
             <div className="relative z-10 w-full max-w-4xl mx-auto text-center space-y-6 animate-in fade-in duration-1000 slide-in-from-bottom-5">
 
                 {/* Location Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#CCA43B]/30 bg-[#0F2027]/50 backdrop-blur-sm shadow-sm mx-auto">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#CCA43B]/30 bg-[#202f43]/50 backdrop-blur-sm shadow-sm mx-auto">
                     <MapPin className="w-4 h-4 text-[#CCA43B]" />
                     <span className="text-[#CCA43B] text-[10px] md:text-xs font-bold tracking-widest uppercase">
                         De Coquimbo a Antofagasta

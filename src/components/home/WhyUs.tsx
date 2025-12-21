@@ -42,45 +42,49 @@ export const WhyUs = () => {
     return (
         <Section className="pt-20 lg:pt-24 pb-20 lg:pb-48 bg-white relative">
             {/* Subtle Pattern Background - Positioned absolutely but clipped by relative container naturally or acceptable overflow */}
-            <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#0F2027_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#202f43_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
 
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start max-w-6xl mx-auto relative z-10">
+            <div className="container mx-auto px-4 relative z-10">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+                    {/* Left Column: Content */}
+                    <div className="space-y-10">
+                        <div className="space-y-6">
+                            <span className="text-[#CCA43B] font-bold tracking-widest uppercase text-sm">
+                                ¿Por qué elegirnos?
+                            </span>
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#202f43] mb-6 leading-tight">
+                                Más que contadores, somos tus <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CCA43B] to-[#b48d28]">aliados estratégicos.</span>
+                            </h2>
+                            <p className="text-gray-600 text-lg leading-relaxed">
+                                Nos encargamos de todo lo aburrido y complejo de la contabilidad para que tú te dediques a lo que mejor sabes hacer: <strong>hacer crecer tu negocio.</strong>
+                            </p>
+                        </div>
 
-                {/* Left Column: Value Proposition */}
-                <div className="space-y-8 animate-in slide-in-from-left-8 duration-700">
-                    <div>
-                        <span className="text-[#CCA43B] font-bold tracking-widest uppercase text-sm mb-2 block">
-                            ¿Por qué elegirnos?
-                        </span>
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0F2027] mb-6 leading-tight">
-                            Más que contadores, somos tus <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CCA43B] to-[#b48d28]">aliados estratégicos</span>.
-                        </h2>
-                        <p className="text-lg text-gray-600 leading-relaxed max-w-xl">
-                            Deja la burocracia en nuestras manos. Nos enfocamos en el cumplimiento tributario y laboral para que tú te enfoques en crecer.
-                        </p>
-                    </div>
-
-                    <div className="grid sm:grid-cols-2 gap-8">
-                        {benefits.map((benefit, index) => (
-                            <div key={index} className="space-y-3">
-                                <div className="bg-gray-100 w-12 h-12 rounded-xl flex items-center justify-center border border-gray-200 shadow-sm">
-                                    {benefit.icon}
+                        <div className="grid sm:grid-cols-2 gap-6">
+                            {benefits.map((benefit, index) => (
+                                <div key={index} className="flex gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100">
+                                    <div className="shrink-0 mt-1">
+                                        {benefit.icon}
+                                    </div>
+                                    <div>
+                                        <h4 className="text-[#202f43] font-bold text-lg">{benefit.title}</h4>
+                                        <p className="text-gray-500 text-sm leading-relaxed mt-1">
+                                            {benefit.description}
+                                        </p>
+                                    </div>
                                 </div>
-                                <h4 className="text-[#0F2027] font-bold text-lg">{benefit.title}</h4>
-                                <p className="text-gray-500 text-sm leading-relaxed">
-                                    {benefit.description}
-                                </p>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Right Column: Sticky Form */}
+                    <div className="w-full max-w-md lg:ml-auto lg:sticky lg:top-28 lg:mt-9">
+                        <HeroForm className="!bg-[#202f43] shadow-2xl border-gray-800" />
                     </div>
                 </div>
-
-                {/* Right Column: Key Form (Sticky) */}
-                <div className="w-full max-w-md lg:ml-auto lg:sticky lg:top-28 lg:mt-9">
-                    <HeroForm className="!bg-[#0F2027] shadow-2xl border-gray-800" />
-                </div>
-
             </div>
         </Section>
     );
 };
+
