@@ -119,6 +119,15 @@ export const SmartWhatsAppBtn = () => {
     };
 
     const handleOptionClick = (message: string) => {
+        // Push GTM Event
+        if (typeof window !== "undefined" && (window as any).dataLayer) {
+            (window as any).dataLayer.push({
+                event: "whatsapp_click",
+                message_content: message,
+                page_location: pathname
+            });
+        }
+
         const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(url, "_blank");
         setIsMenuOpen(false);
