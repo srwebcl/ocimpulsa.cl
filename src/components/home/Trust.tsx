@@ -22,7 +22,7 @@ export const Trust = () => {
     ];
 
     return (
-        <Section background="gray" className="relative">
+        <Section className="relative">
             <div className="text-center mb-16">
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                     ¿Por qué <span className="text-primary">OC Impulsa</span>?
@@ -38,7 +38,7 @@ export const Trust = () => {
                         key={index}
                         className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
                     >
-                        <div className="h-14 w-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6">
+                        <div className="h-14 w-14 bg-primary/5 text-primary rounded-xl flex items-center justify-center mb-6 border border-primary/10">
                             <benefit.icon size={32} />
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 mb-3">

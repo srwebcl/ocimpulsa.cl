@@ -28,12 +28,12 @@ export const Button: React.FC<ButtonProps> = ({
 
     const variants = {
         primary:
-            "bg-primary text-white hover:bg-blue-900 shadow-md hover:shadow-lg focus:ring-primary/50",
+            "bg-gradient-to-r from-[#0F2027] via-[#203A43] to-[#2C5364] text-white hover:opacity-95 bg-[length:200%_200%] transition-all hover:bg-right shadow-md hover:shadow-lg focus:ring-primary/50 border-none",
         secondary:
-            "bg-secondary text-white hover:bg-orange-600 shadow-md hover:shadow-lg focus:ring-secondary/50",
+            "bg-gradient-to-r from-[#f4bf6a] via-[#bb8833] to-[#905c00] text-white hover:opacity-95 bg-[length:200%_200%] transition-all hover:bg-right shadow-md hover:shadow-lg focus:ring-secondary/50 border-none",
         outline:
-            "bg-transparent border-2 border-primary text-primary hover:bg-primary/5 focus:ring-primary/50",
-        ghost: "bg-transparent text-gray-700 hover:bg-gray-100 hover:text-primary",
+            "bg-transparent border-2 border-[#102A43] text-[#102A43] hover:bg-[#102A43]/5 focus:ring-[#102A43]/50",
+        ghost: "bg-transparent text-gray-700 hover:bg-gray-100 hover:text-[#102A43]",
     };
 
     const sizes = {

@@ -11,47 +11,46 @@ export const metadata: Metadata = {
 export default function CrecerPage() {
     const plans = [
         {
-            name: "Plan Básico Orden",
+            name: "Plan Básico / Pyme",
             price: "$39.000",
-            description: "Para empresas de servicios o profesionales independientes.",
+            description: "Para empresas de servicios o profesionales que necesitan orden.",
             features: [
-                "Declaración F29 Mensual",
+                "Contabilidad mensual",
+                "Declaración de F29",
                 "Declaración Renta Anual F22",
-                "Balance Financiero Anual",
-                "Asesoría Contable WhatsApp",
-                "Sin Gestión de Personas"
+                "Confección de estados financieros",
+                "Asesoría de crecimiento"
             ],
             notIncluded: ["Contratos y Liquidaciones", "Gestión de Google Ads"],
             cta: "Contratar Básico",
             highlight: false
         },
         {
-            name: "Plan RRHH Equipo",
-            price: "$45.000",
+            name: "Plan Recursos Humanos",
+            price: "Desde $39.000",
             priceDetail: "+ $6.000/persona",
-            description: "Para empresas con equipo. Cumple con la ley laboral.",
+            description: "Gestión laboral completa. Cumple con la ley sin estrés.",
             features: [
                 "Todo lo del Plan Básico",
-                "Contratos de Trabajo",
-                "Liquidaciones de Sueldo",
-                "Cargas en Previred",
-                "Certificados de Cotizaciones",
-                "Finiquitos"
+                "Contratos de trabajo y anexos",
+                "Cálculo de liquidaciones",
+                "Carga en Previred",
+                "Finiquitos y Certificados F30"
             ],
             notIncluded: ["Gestión de Google Ads"],
-            cta: "Contratar Equipos",
+            cta: "Contratar Plan RRHH",
             highlight: true
         },
         {
             name: "Plan Negocio Online",
             price: "A medida",
-            description: "Full Growth. Contabilidad + Marketing Digital para escalar.",
+            description: "La solución total: Contabilidad + Marketing para escalar.",
             features: [
                 "Todo lo del Plan RRHH",
                 "Gestión de Campañas Google Ads",
                 "Optimización de Landing Pages",
-                "Reportes de Ventas vs Gasto Publicitario",
-                "Estrategia Tributaria Avanzada"
+                "Reportes de retorno de inversión (ROAS)",
+                "Estrategia comercial mensual"
             ],
             notIncluded: [],
             cta: "Cotizar Plan Growth",
@@ -60,40 +59,58 @@ export default function CrecerPage() {
     ];
 
     return (
-        <main className="pt-20">
-            <Section className="bg-white text-center">
-                <span className="text-primary font-bold tracking-wide uppercase">Etapa 2: Crecer</span>
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Planes Transparentes</h1>
-                <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Elige el plan que se adapte a tu etapa actual. Puedes cambiarte cuando quieras.
+        <main className="min-h-screen bg-[#F4F1EA] pt-24 pb-20">
+            <Section className="bg-[#F4F1EA] text-center">
+                <span className="text-[#0F2027] font-bold tracking-wide uppercase text-sm mb-2 block">Crecimiento sin Techo</span>
+                <h1 className="text-4xl md:text-5xl font-bold text-[#0F2027] mb-6">Planes Mensuales Transparentes</h1>
+                <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+                    Elige el plan que se adapte a tu etapa actual. <br />
+                    <strong className="text-[#CCA43B]">Sin multas. Sin excusas.</strong>
                 </p>
             </Section>
 
-            <Section background="gray">
-                <div className="grid lg:grid-cols-3 gap-8">
+            <Section>
+                <div className="grid lg:grid-cols-3 gap-8 max-w-screen-2xl mx-auto">
                     {plans.map((plan) => (
-                        <div key={plan.name} className={`relative bg-white rounded-2xl shadow-sm border ${plan.highlight ? 'border-primary ring-1 ring-primary/20 shadow-xl scale-105 z-10' : 'border-gray-200'} flex flex-col p-8`}>
+                        <div
+                            key={plan.name}
+                            className={`relative rounded-2xl shadow-lg border transition-all duration-300 flex flex-col p-8 ${plan.highlight
+                                ? 'bg-[#0F2027] text-white border-[#CCA43B] scale-105 z-10'
+                                : 'bg-white text-[#0F2027] border-gray-200 hover:border-[#CCA43B]/30'
+                                }`}
+                        >
                             {plan.highlight && (
-                                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">
-                                    RECOMENDADO
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#CCA43B] text-[#0F2027] px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-md">
+                                    Más Solicitado
                                 </div>
                             )}
-                            <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                            <div className="mb-4">
-                                <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                                {plan.priceDetail && <span className="text-sm text-gray-500 ml-2">{plan.priceDetail}</span>}
+
+                            <h3 className={`text-2xl font-bold mb-2 ${plan.highlight ? 'text-white' : 'text-[#0F2027]'}`}>
+                                {plan.name}
+                            </h3>
+                            <div className="mb-4 flex items-baseline flex-wrap gap-2">
+                                <span className={`text-4xl font-bold ${plan.highlight ? 'text-[#CCA43B]' : 'text-[#0F2027]'}`}>
+                                    {plan.price}
+                                </span>
+                                {plan.priceDetail && (
+                                    <span className={`text-sm font-medium ${plan.highlight ? 'text-gray-300' : 'text-gray-500'}`}>
+                                        {plan.priceDetail}
+                                    </span>
+                                )}
                             </div>
-                            <p className="text-gray-500 mb-6 text-sm">{plan.description}</p>
+                            <p className={`mb-8 text-sm leading-relaxed ${plan.highlight ? 'text-gray-300' : 'text-gray-500'}`}>
+                                {plan.description}
+                            </p>
 
                             <div className="flex-grow space-y-4 mb-8">
                                 {plan.features.map((feature) => (
-                                    <div key={feature} className="flex items-start gap-3 text-gray-700 text-sm">
-                                        <Check className="text-green-500 w-5 h-5 shrink-0" />
+                                    <div key={feature} className="flex items-start gap-3 text-sm">
+                                        <Check className={`w-5 h-5 shrink-0 ${plan.highlight ? 'text-[#CCA43B]' : 'text-[#0F2027]'}`} />
                                         <span>{feature}</span>
                                     </div>
                                 ))}
                                 {plan.notIncluded.map((feature) => (
-                                    <div key={feature} className="flex items-start gap-3 text-gray-400 text-sm">
+                                    <div key={feature} className={`flex items-start gap-3 text-sm ${plan.highlight ? 'text-gray-600' : 'text-gray-300'}`}>
                                         <X className="w-5 h-5 shrink-0" />
                                         <span className="line-through">{feature}</span>
                                     </div>
@@ -102,8 +119,10 @@ export default function CrecerPage() {
 
                             <Button
                                 href={`https://wa.me/56912345678?text=Me%20interesa%20el%20${plan.name}`}
-                                variant={plan.highlight ? "primary" : "outline"}
-                                className="w-full"
+                                className={`w-full font-bold ${plan.highlight
+                                    ? "bg-[#CCA43B] text-[#0F2027] hover:bg-[#b88f28]"
+                                    : "bg-[#0F2027] text-white hover:bg-[#1B2A41]"
+                                    }`}
                             >
                                 {plan.cta}
                             </Button>

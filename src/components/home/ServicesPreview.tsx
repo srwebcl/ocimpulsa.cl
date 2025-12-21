@@ -13,7 +13,8 @@ export const ServicesPreview = () => {
             priceDetail: "Pago único",
             icon: Building,
             href: "/nacer",
-            color: "bg-blue-100 text-blue-600",
+            // Gold Theme
+            color: "bg-secondary/10 text-secondary",
             cta: "Empezar",
         },
         {
@@ -24,7 +25,8 @@ export const ServicesPreview = () => {
             priceDetail: "desde / mes",
             icon: Rocket,
             href: "/crecer",
-            color: "bg-orange-100 text-orange-600",
+            // Primary Theme
+            color: "bg-primary/10 text-primary",
             cta: "Ver Planes",
             highlight: true
         },
@@ -36,7 +38,7 @@ export const ServicesPreview = () => {
             priceDetail: "según requerimiento",
             icon: BarChart3,
             href: "/consolidar",
-            color: "bg-purple-100 text-purple-600",
+            color: "bg-gray-100 text-gray-600",
             cta: "Más Info",
         },
     ];
@@ -56,13 +58,13 @@ export const ServicesPreview = () => {
                 {stages.map((stage, index) => (
                     <div
                         key={index}
-                        className={`relative flex flex-col p-8 rounded-2xl border transition-all duration-300 hover:shadow-lg ${stage.highlight
-                                ? "border-primary shadow-md ring-1 ring-primary/10"
-                                : "border-gray-200 hover:border-gray-300"
+                        className={`relative flex flex-col p-8 rounded-2xl border transition-all duration-300 hover:shadow-xl bg-white ${stage.highlight
+                            ? "border-secondary shadow-lg ring-1 ring-secondary/20 transform scale-[1.02]"
+                            : "border-gray-200 hover:border-secondary/30"
                             }`}
                     >
                         {stage.highlight && (
-                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full tracking-wide">
+                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary-gradient text-white text-xs font-bold px-4 py-1.5 rounded-full tracking-wide shadow-md">
                                 MÁS POPULAR
                             </div>
                         )}

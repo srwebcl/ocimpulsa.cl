@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { Section } from "@/components/ui/Section";
-import { FileText, Search, Globe, Award } from "lucide-react";
+import { FileText, Search, Globe, Award, BarChart, TrendingUp } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,47 +11,64 @@ export const metadata: Metadata = {
 export default function ConsolidarPage() {
     const services = [
         {
-            title: "Operación Renta (F22)",
-            description: "Preparamos y realizamos tu declaración anual de renta para asegurar el cumplimiento tributario óptimo.",
-            icon: FileText
-        },
-        {
             title: "Auditorías Contables",
-            description: "Revisamos tu contabilidad de años anteriores para detectar errores, multas latentes o impuestos pagados en exceso.",
+            description: "Revisión exhaustiva de periodos anteriores para detectar y corregir errores ante el SII.",
             icon: Search
         },
         {
+            title: "Operación Renta (F22)",
+            description: "Preparación y envío de tu declaración anual. Optimizamos tu carga tributaria legalmente.",
+            icon: FileText
+        },
+        {
+            title: "Conciliaciones Bancarias",
+            description: "Ordenamos tus cartolas bancarias para que cuadren perfectamente con tu contabilidad.",
+            icon: BarChart
+        },
+        {
             title: "Postulaciones Sercotec/Corfo",
-            description: "Te ayudamos a formular proyectos ganadores para obtener fondos públicos no reembolsables.",
+            description: "Te apoyamos en la formulación de proyectos para ganar fondos de emprendimiento.",
             icon: Award
         },
         {
             title: "Exportación de Servicios",
-            description: "Asesoría especializada para empresas que venden servicios al extranjero (Exención IVA, Invoice, etc).",
+            description: "Asesoría para facturar al extranjero exento de IVA y manejo de invoices.",
             icon: Globe
+        },
+        {
+            title: "Gestión y Control",
+            description: "Asesoría administrativa para mejorar los flujos y procesos internos de tu empresa.",
+            icon: TrendingUp
         }
     ];
 
     return (
-        <main className="pt-20">
-            <Section className="bg-white">
+        <main className="min-h-screen bg-[#F4F1EA] pt-24 pb-20">
+            <Section className="bg-[#F4F1EA]">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <span className="text-primary font-bold tracking-wide uppercase">Etapa 3: Consolidar</span>
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Servicios Adicionales</h1>
+                    <span className="text-[#CCA43B] font-bold tracking-wide uppercase text-sm mb-2 block">Etapa 3: Consolidar</span>
+                    <h1 className="text-4xl md:text-5xl font-bold text-[#0F2027] mb-6">Servicios Especializados</h1>
                     <p className="text-xl text-gray-600">
-                        Soluciones específicas para momentos clave de tu empresa.
+                        Soluciones a medida para momentos clave. No dejes cabos sueltos en tu negocio.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl mx-auto">
                     {services.map((service) => (
-                        <div key={service.title} className="bg-gray-50 hover:bg-white p-8 rounded-2xl transition-all duration-300 border border-gray-100 hover:shadow-lg group">
-                            <div className="h-12 w-12 bg-white text-primary rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        <div key={service.title} className="bg-white p-8 rounded-2xl transition-all duration-300 border border-gray-100/50 shadow-sm hover:shadow-xl hover:border-[#CCA43B]/30 group">
+                            <div className="h-12 w-12 bg-[#0F2027] text-[#CCA43B] rounded-xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform">
                                 <service.icon size={24} />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                            <p className="text-gray-600 mb-6">{service.description}</p>
-                            <Button variant="outline" size="sm" href="https://wa.me/56912345678">Consultar</Button>
+                            <h3 className="text-xl font-bold text-[#0F2027] mb-3">{service.title}</h3>
+                            <p className="text-gray-600 mb-6 text-sm leading-relaxed">{service.description}</p>
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                className="w-full border-gray-200 text-[#0F2027] hover:border-[#CCA43B] hover:text-[#CCA43B]"
+                                href="https://wa.me/56912345678"
+                            >
+                                Consultar
+                            </Button>
                         </div>
                     ))}
                 </div>

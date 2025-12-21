@@ -27,7 +27,7 @@ export const Section: React.FC<SectionProps> = ({
             className={cn("py-16 md:py-24", bgColors[background], className)}
             {...props}
         >
-            <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
+            <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-screen-2xl">
                 {children}
             </div>
         </section>

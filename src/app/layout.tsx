@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { WhatsAppButton } from "@/components/conversion/WhatsAppButton";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -25,11 +28,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${outfit.variable} antialiased font-sans text-gray-900 bg-white`}
+        className={`${inter.variable} ${outfit.variable} antialiased font-sans text-gray-900 bg-background`}
+        suppressHydrationWarning={true}
       >
+        <Header />
         {children}
+        <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );
