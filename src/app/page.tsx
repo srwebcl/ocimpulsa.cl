@@ -19,7 +19,7 @@ export default function Home() {
             Agenda tu diagnóstico gratuito hoy mismo y descubre cómo podemos ayudarte.
           </p>
           <a
-            href="https://wa.me/56912345678"
+            href="https://wa.me/56967336906"
             className="inline-flex items-center justify-center rounded-lg bg-white text-primary font-bold px-8 py-4 text-lg hover:bg-gray-50 transition-colors shadow-lg"
           >
             Hablemos por WhatsApp

@@ -32,7 +32,7 @@ export default function FormalizaPage() {
 
                     <FadeIn delay={0.5}>
                         <div className="flex justify-center gap-4">
-                            <Button size="lg" className="bg-[#202f43] text-white hover:bg-[#15202b] px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300" href="https://wa.me/56912345678?text=Hola,%20quiero%20formalizar%20mi%20empresa">
+                            <Button size="lg" className="bg-[#202f43] text-white hover:bg-[#15202b] px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300" href="https://wa.me/56967336906?text=Hola,%20quiero%20formalizar%20mi%20empresa">
                                 Comenzar Trámite
                                 <ArrowRight className="ml-2 h-5 w-5" />
                             </Button>
@@ -90,7 +90,7 @@ export default function FormalizaPage() {
                                     <span className="text-3xl font-bold text-[#CCA43B]">$250.000</span>
                                 </div>
 
-                                <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white/10" href="https://wa.me/56912345678?text=Me%20interesa%20el%20pack%20Formaliza%20Online">
+                                <Button variant="outline" className="w-full border-white/20 text-white hover:bg-white/10" href="https://wa.me/56967336906?text=Me%20interesa%20el%20pack%20Formaliza%20Online">
                                     Cotizar Pack Online
                                 </Button>
                             </div>

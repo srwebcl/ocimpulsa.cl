@@ -34,8 +34,8 @@ export default function ContactoPage() {
                                         </div>
                                         <div>
                                             <p className="text-sm text-gray-500 font-medium">Teléfono / WhatsApp</p>
-                                            <a href="tel:+56912345678" className="text-lg font-bold text-[#202f43] hover:text-[#CCA43B] transition-colors">
-                                                +56 9 1234 5678
+                                            <a href="tel:+56967336906" className="text-lg font-bold text-[#202f43] hover:text-[#CCA43B] transition-colors">
+                                                +56 9 6733 6906
                                             </a>
                                         </div>
                                     </div>
@@ -58,7 +58,7 @@ export default function ContactoPage() {
                                         </div>
                                         <div>
                                             <p className="text-sm text-gray-500 font-medium">Cobertura</p>
-                                            <p className="text-lg font-bold text-[#202f43]">Región de Coquimbo<br />y Antofagasta</p>
+                                            <p className="text-lg font-bold text-[#202f43]">Ovalle, Chile<br />Región de Coquimbo</p>
                                             <p className="text-sm text-gray-500">Atención 100% Online y Presencial (Agenda)</p>
                                         </div>
                                     </div>
@@ -75,7 +75,7 @@ export default function ContactoPage() {
                                 </p>
 
                                 <Button
-                                    href="https://wa.me/56912345678"
+                                    href="https://wa.me/56967336906"
                                     className="w-full bg-[#CCA43B] text-[#202f43] hover:bg-[#b88f28] font-bold text-lg py-6 shadow-md hover:shadow-lg transition-all"
                                 >
                                     Agendar Diagnóstico

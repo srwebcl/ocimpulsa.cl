@@ -5,11 +5,14 @@ import { Facebook, Instagram, Linkedin, MapPin, Mail, Phone } from "lucide-react
 
 export const Footer = () => {
     const currentYear = new Date().getFullYear();
+    const cities = ["Ovalle", "Coquimbo", "La Serena", "Vallenar", "Copiapó", "Caldera", "Antofagasta"];
 
     return (
-        <footer className="bg-gradient-to-t from-[#15202b] to-[#202f43] text-gray-300 py-12 md:py-16 border-t border-[#CCA43B]/10">
-            <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-screen-2xl">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <footer className="bg-gradient-to-t from-[#15202b] to-[#202f43] text-gray-300 border-t border-[#CCA43B]/10 overflow-hidden relative">
+
+            {/* Main Content */}
+            <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-screen-2xl pt-12 md:pt-16 pb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
                     {/* Brand Column */}
                     <div className="space-y-6">
                         <div className="relative h-12 w-40">
@@ -22,7 +25,7 @@ export const Footer = () => {
                             />
                         </div>
                         <p className="text-sm leading-relaxed max-w-xs text-gray-400">
-                            Professionalismo, Cercanía y Confianza.
+                            Profesionalismo, Cercanía y Confianza.
                             Ingeniería contable para empresas que buscan crecer con bases sólidas en el Norte de Chile.
                         </p>
                         <div className="flex gap-4">
@@ -39,7 +42,7 @@ export const Footer = () => {
                             <li><Link href="/nacer" className="hover:text-[#CCA43B] transition-colors">Formaliza tu Negocio</Link></li>
                             <li><Link href="/crecer" className="hover:text-[#CCA43B] transition-colors">Planes Mensuales</Link></li>
                             <li><Link href="/consolidar" className="hover:text-[#CCA43B] transition-colors">Negocio Online</Link></li>
-                            <li><Link href="/contact" className="hover:text-[#CCA43B] transition-colors">Auditorías Tributarias</Link></li>
+                            <li><Link href="/contacto" className="hover:text-[#CCA43B] transition-colors">Auditorías Tributarias</Link></li>
                         </ul>
                     </div>
 
@@ -47,9 +50,8 @@ export const Footer = () => {
                     <div>
                         <h3 className="text-white font-bold text-lg mb-6">Empresa</h3>
                         <ul className="space-y-4 text-sm">
-                            <li><Link href="/about" className="hover:text-[#CCA43B] transition-colors">Nosotros</Link></li>
+                            <li><Link href="/nosotros" className="hover:text-[#CCA43B] transition-colors">Nosotros</Link></li>
                             <li><Link href="/contacto" className="hover:text-[#CCA43B] transition-colors">Contacto</Link></li>
-                            <li><span className="text-[#CCA43B] font-medium">Trabaja con nosotros</span></li>
                         </ul>
                     </div>
 
@@ -59,11 +61,11 @@ export const Footer = () => {
                         <ul className="space-y-4 text-sm">
                             <li className="flex items-start gap-3">
                                 <MapPin size={18} className="mt-1 text-[#CCA43B] shrink-0" />
-                                <span>Región de Coquimbo<br />y Antofagasta</span>
+                                <span>Ovalle, Chile<br />Región de Coquimbo</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone size={18} className="text-[#CCA43B] shrink-0" />
-                                <a href="tel:+56912345678" className="hover:text-white transition-colors">+56 9 1234 5678</a>
+                                <a href="tel:+56967336906" className="hover:text-white transition-colors">+56 9 6733 6906</a>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail size={18} className="text-[#CCA43B] shrink-0" />
@@ -72,12 +74,45 @@ export const Footer = () => {
                         </ul>
                     </div>
                 </div>
+            </div>
 
-                <div className="border-t border-[#CCA43B]/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-                    <p>&copy; {currentYear} OC Impulsa SpA. Todos los derechos reservados.</p>
-                    <div className="flex gap-6">
-                        <Link href="#" className="hover:text-[#CCA43B] transition-colors">Políticas de Privacidad</Link>
-                        <Link href="#" className="hover:text-[#CCA43B] transition-colors">Términos y Condiciones</Link>
+            {/* Premium Ticker Tape (Relative Position) */}
+            <div className="w-full overflow-hidden py-3 bg-[#202f43]/30 border-t border-[#CCA43B]/5 backdrop-blur-[2px]">
+                <div className="animate-marquee flex whitespace-nowrap gap-12 items-center">
+                    {[...cities, ...cities, ...cities, ...cities].map((city, i) => (
+                        <div key={i} className="flex items-center gap-12">
+                            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gray-400/60">
+                                {city}
+                            </span>
+                            <span className="h-1 w-1 rounded-full bg-[#CCA43B]/40"></span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Bottom Bar */}
+            <div className="border-t border-[#CCA43B]/20 bg-[#15202b]">
+                <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-screen-2xl py-8">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-500">
+                        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 order-2 md:order-1 text-center md:text-left">
+                            {/* Developer Badge */}
+                            <a
+                                href="https://srweb.cl"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-[#CCA43B] transition-colors group bg-white/5 px-3 py-1.5 rounded-full border border-white/5 hover:border-[#CCA43B]/30"
+                            >
+                                <span>Desarrollado con</span>
+                                <span className="text-yellow-400 text-sm group-hover:scale-125 transition-transform duration-300">⚡</span>
+                                <span>por <span className="font-bold text-gray-300 group-hover:text-white">SRweb</span></span>
+                            </a>
+                            <p>&copy; {currentYear} OC Impulsa SpA.</p>
+                        </div>
+
+                        <div className="flex flex-wrap justify-center gap-6 order-1 md:order-2">
+                            <Link href="#" className="hover:text-[#CCA43B] transition-colors">Políticas de Privacidad</Link>
+                            <Link href="#" className="hover:text-[#CCA43B] transition-colors">Términos y Condiciones</Link>
+                        </div>
                     </div>
                 </div>
             </div>

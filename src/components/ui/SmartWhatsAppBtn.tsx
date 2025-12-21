@@ -61,7 +61,7 @@ export const SmartWhatsAppBtn = () => {
     };
 
     const options = getMenuOptions();
-    const phoneNumber = "56912345678";
+    const phoneNumber = "56967336906";
 
     // Timer for Bubble
     useEffect(() => {

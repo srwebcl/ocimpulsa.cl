@@ -121,7 +121,7 @@ export default function CrecerPage() {
                                 </div>
 
                                 <Button
-                                    href={`https://wa.me/56912345678?text=Me%20interesa%20el%20${plan.name}`}
+                                    href={`https://wa.me/56967336906?text=Me%20interesa%20el%20${plan.name}`}
                                     className={`w-full font-bold ${plan.highlight
                                         ? "bg-[#CCA43B] text-[#202f43] hover:bg-[#b88f28]"
                                         : "bg-[#202f43] text-white hover:bg-[#15202b]"

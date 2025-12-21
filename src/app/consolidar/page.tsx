@@ -69,7 +69,7 @@ export default function ConsolidarPage() {
                                     variant="outline"
                                     size="sm"
                                     className="w-full border-gray-200 text-[#202f43] hover:border-[#CCA43B] hover:text-[#CCA43B]"
-                                    href="https://wa.me/56912345678"
+                                    href="https://wa.me/56967336906"
                                 >
                                     Consultar
                                 </Button>
