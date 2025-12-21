@@ -72,6 +72,31 @@ export const Trust = () => {
                     </FadeIn>
                 ))}
             </div>
+
+            {/* Final Home CTA (Integrated) */}
+            <div className="mt-20 lg:mt-24 text-center relative z-10 max-w-4xl mx-auto px-4">
+                <FadeIn direction="up" delay={0.4}>
+                    <div className="p-8 md:p-12 rounded-3xl bg-gray-50 border border-gray-100 shadow-sm relative overflow-hidden group hover:border-[#CCA43B]/20 transition-all cursor-default">
+                        {/* Background Decor */}
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-[#CCA43B] rounded-full blur-[80px] opacity-[0.07] group-hover:opacity-10 transition-opacity"></div>
+                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#202f43] rounded-full blur-[80px] opacity-[0.03] group-hover:opacity-5 transition-opacity"></div>
+
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#202f43] mb-6 relative z-10">
+                            ¿Listo para ordenar tu negocio?
+                        </h2>
+                        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto relative z-10">
+                            Agenda tu diagnóstico gratuito hoy mismo y descubre cómo podemos ayudarte a escalar.
+                        </p>
+
+                        <a
+                            href="https://wa.me/56967336906"
+                            className="relative z-10 inline-flex items-center justify-center rounded-xl bg-[#202f43] text-white font-bold px-10 py-5 text-lg hover:bg-[#15202b] transition-all shadow-xl hover:scale-105"
+                        >
+                            Hablemos por WhatsApp
+                        </a>
+                    </div>
+                </FadeIn>
+            </div>
         </Section>
     );
 };

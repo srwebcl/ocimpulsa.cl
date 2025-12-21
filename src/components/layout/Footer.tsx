@@ -66,6 +66,7 @@ export const Footer = () => {
                         <ul className="space-y-4 text-sm">
                             <li><Link href="/nosotros" className="hover:text-[#CCA43B] transition-colors">Nosotros</Link></li>
                             <li><Link href="/contacto" className="hover:text-[#CCA43B] transition-colors">Contacto</Link></li>
+                            <li><Link href="/politica-cookies" className="hover:text-[#CCA43B] transition-colors">Políticas de Privacidad</Link></li>
                         </ul>
                     </div>
 
@@ -111,10 +112,7 @@ export const Footer = () => {
                             <p>&copy; {currentYear} OC Impulsa SpA.</p>
                         </div>
 
-                        <div className="flex flex-wrap justify-center gap-6 order-1 md:order-2">
-                            <Link href="#" className="hover:text-[#CCA43B] transition-colors">Políticas de Privacidad</Link>
-                            <Link href="#" className="hover:text-[#CCA43B] transition-colors">Términos y Condiciones</Link>
-                        </div>
+
                     </div>
                 </div>
             </div>

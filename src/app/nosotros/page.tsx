@@ -39,9 +39,9 @@ export default function NosotrosPage() {
 
                     <FadeIn delay={0.3} direction="up">
                         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] text-balance">
-                            Ingeniería Contable <br />
+                            Contabilidad Experta <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f4bf6a] via-[#bb8833] to-[#ffff81]">
-                                con Enfoque Humano.
+                                y 100% Cercana.
                             </span>
                         </h1>
                     </FadeIn>

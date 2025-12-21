@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/conversion/WhatsAppButton";
 
 import { SmartWhatsAppBtn } from "@/components/ui/SmartWhatsAppBtn";
+import { CookieConsent } from "@/components/ui/CookieConsent";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
@@ -27,6 +28,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <SmartWhatsAppBtn />
+        <CookieConsent />
       </body>
     </html>
   );

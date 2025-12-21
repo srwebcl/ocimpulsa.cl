@@ -39,9 +39,9 @@ export default function ContactoPage() {
 
                     <FadeIn delay={0.3} direction="up">
                         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] text-balance">
-                            Hablemos de tu <br />
+                            Agenda tu <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f4bf6a] via-[#bb8833] to-[#ffff81]">
-                                próximo nivel.
+                                Asesoría Contable.
                             </span>
                         </h1>
                     </FadeIn>
@@ -122,27 +122,7 @@ export default function ContactoPage() {
                         {/* Right Column: Sticky Form */}
                         <div className="w-full max-w-md lg:ml-auto lg:sticky lg:top-28 lg:mt-9">
                             <FadeIn direction="left" delay={0.2}>
-                                <div className="bg-[#202f43] p-8 rounded-3xl shadow-2xl border border-gray-700 relative overflow-hidden">
-                                    <div className="absolute top-0 right-0 w-40 h-40 bg-[#CCA43B] rounded-full blur-[80px] opacity-20"></div>
-
-                                    <h3 className="text-2xl font-bold text-white mb-2 relative z-10">Agenda Diagnóstico</h3>
-                                    <p className="text-gray-400 text-sm mb-6 relative z-10">Reunión gratuita de 15 minutos.</p>
-
-                                    <div className="space-y-4 relative z-10">
-                                        <Button
-                                            href="https://wa.me/56967336906"
-                                            className="w-full bg-[#CCA43B] text-[#202f43] hover:bg-[#b88f28] font-bold py-4 text-lg border-0"
-                                        >
-                                            <CalendarCheck className="mr-2 h-5 w-5" /> Agendar Reunión
-                                        </Button>
-                                        <p className="text-xs text-center text-gray-500">
-                                            Te responderemos vía WhatsApp para coordinar.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="mt-8">
-                                    <HeroForm className="!bg-white !text-[#202f43] shadow-xl border-gray-200" />
-                                </div>
+                                <HeroForm className="!bg-[#202f43] shadow-2xl border-gray-800" />
                             </FadeIn>
                         </div>
                     </div>
