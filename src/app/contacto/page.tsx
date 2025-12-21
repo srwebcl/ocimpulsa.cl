@@ -1,88 +1,150 @@
-import { Section } from "@/components/ui/Section";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/Button";
-import { FadeIn } from "@/components/ui/motion/FadeIn";
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-    title: "Contacto | OC Impulsa",
-    description: "Contáctanos para resolver tus dudas contables y tributarias. Coquimbo y Antofagasta.",
-};
+import React from "react";
+import { Button } from "@/components/ui/Button";
+import { Section } from "@/components/ui/Section";
+import { Mail, Phone, MapPin, MessageCircle, Clock, CalendarCheck } from "lucide-react";
+import { FadeIn } from "@/components/ui/motion/FadeIn";
+import { HeroForm } from "@/components/home/HeroForm";
 
 export default function ContactoPage() {
     return (
-        <main className="min-h-screen bg-[#F4F1EA] pt-24 pb-20">
-            <Section className="bg-[#F4F1EA]">
-                <div className="max-w-4xl mx-auto">
-                    <FadeIn direction="up">
-                        <div className="text-center mb-12">
-                            <span className="text-[#CCA43B] font-bold tracking-wide uppercase text-sm mb-2 block">Estamos para ayudarte</span>
-                            <h1 className="text-4xl md:text-5xl font-bold text-[#202f43]">Hablemos de tu Negocio</h1>
+        <main className="min-h-screen flex flex-col bg-[#F4F1EA]">
+
+            {/* 1. HERO SECTION */}
+            <Section className="relative min-h-[60vh] lg:min-h-[70vh] flex items-center justify-center overflow-hidden py-20">
+                <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="absolute min-w-full min-h-full object-cover w-full h-full opacity-60"
+                    >
+                        <source src="/images/hero-video.mp4" type="video/mp4" />
+                    </video>
+                    <div className="absolute inset-0 bg-[#202f43]/85 mix-blend-multiply"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#202f43] via-transparent to-[#202f43]/40"></div>
+                </div>
+
+                <div className="relative z-10 w-full max-w-4xl mx-auto text-center space-y-6">
+                    <FadeIn delay={0.1} direction="down">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#CCA43B]/30 bg-[#202f43]/50 backdrop-blur-sm shadow-sm mx-auto">
+                            <MessageCircle className="w-4 h-4 text-[#CCA43B]" />
+                            <span className="text-[#CCA43B] text-[10px] md:text-xs font-bold tracking-widest uppercase">
+                                Estamos en línea
+                            </span>
                         </div>
                     </FadeIn>
 
-                    <div className="grid md:grid-cols-2 gap-8 items-start">
-                        {/* Contact Info */}
-                        <FadeIn delay={0.2} direction="right">
-                            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 space-y-8 h-full">
-                                <h3 className="text-2xl font-bold text-[#202f43] mb-6">Información de Contacto</h3>
+                    <FadeIn delay={0.3} direction="up">
+                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] text-balance">
+                            Hablemos de tu <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f4bf6a] via-[#bb8833] to-[#ffff81]">
+                                próximo nivel.
+                            </span>
+                        </h1>
+                    </FadeIn>
 
-                                <div className="space-y-6">
-                                    <div className="flex items-start gap-4">
-                                        <div className="bg-[#202f43]/5 p-3 rounded-lg text-[#CCA43B]">
+                    <FadeIn delay={0.5} direction="up">
+                        <p className="text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto leading-relaxed">
+                            Resolvemos tus dudas en tiempo récord. Escríbenos, llámanos o visítanos.
+                        </p>
+                    </FadeIn>
+                </div>
+            </Section>
+
+            {/* 2. CONTACT CONTENT */}
+            <Section className="py-20 lg:py-28 bg-white relative">
+                <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#202f43_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
+
+                <div className="container mx-auto px-4 relative z-10">
+                    <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+                        {/* Left Column: Contact Info */}
+                        <div className="space-y-10">
+                            <FadeIn direction="right">
+                                <span className="text-[#CCA43B] font-bold tracking-widest uppercase text-sm block mb-4">
+                                    Canales Directos
+                                </span>
+                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#202f43] mb-8 leading-tight">
+                                    Conectemos <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#CCA43B] to-[#b48d28]">ahora mismo.</span>
+                                </h2>
+                            </FadeIn>
+
+                            <div className="space-y-6">
+                                <FadeIn delay={0.1} direction="up" fullWidth>
+                                    <div className="flex items-start gap-5 p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:border-[#CCA43B]/30 transition-all hover:bg-white hover:shadow-lg group">
+                                        <div className="shrink-0 bg-[#202f43] p-3 rounded-xl text-white shadow-md group-hover:scale-110 transition-transform">
                                             <Phone size={24} />
                                         </div>
                                         <div>
-                                            <p className="text-sm text-gray-500 font-medium">Teléfono / WhatsApp</p>
-                                            <a href="tel:+56967336906" className="text-lg font-bold text-[#202f43] hover:text-[#CCA43B] transition-colors">
+                                            <p className="text-sm text-gray-500 font-bold uppercase tracking-wider mb-1">Llámanos o Escríbenos</p>
+                                            <a href="tel:+56967336906" className="text-2xl font-bold text-[#202f43] block hover:text-[#CCA43B] transition-colors mb-1">
                                                 +56 9 6733 6906
                                             </a>
+                                            <p className="text-sm text-gray-400">Respuesta inmediata en horario hábil.</p>
                                         </div>
                                     </div>
+                                </FadeIn>
 
-                                    <div className="flex items-start gap-4">
-                                        <div className="bg-[#202f43]/5 p-3 rounded-lg text-[#CCA43B]">
+                                <FadeIn delay={0.2} direction="up" fullWidth>
+                                    <div className="flex items-start gap-5 p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:border-[#CCA43B]/30 transition-all hover:bg-white hover:shadow-lg group">
+                                        <div className="shrink-0 bg-[#202f43] p-3 rounded-xl text-white shadow-md group-hover:scale-110 transition-transform">
                                             <Mail size={24} />
                                         </div>
                                         <div>
-                                            <p className="text-sm text-gray-500 font-medium">Correo Electrónico</p>
-                                            <a href="mailto:contacto@ocimpulsa.cl" className="text-lg font-bold text-[#202f43] hover:text-[#CCA43B] transition-colors">
+                                            <p className="text-sm text-gray-500 font-bold uppercase tracking-wider mb-1">Correo Electrónico</p>
+                                            <a href="mailto:contacto@ocimpulsa.cl" className="text-2xl font-bold text-[#202f43] block hover:text-[#CCA43B] transition-colors mb-1 break-all">
                                                 contacto@ocimpulsa.cl
                                             </a>
+                                            <p className="text-sm text-gray-400">Ideal para cotizaciones formales.</p>
                                         </div>
                                     </div>
+                                </FadeIn>
 
-                                    <div className="flex items-start gap-4">
-                                        <div className="bg-[#202f43]/5 p-3 rounded-lg text-[#CCA43B]">
+                                <FadeIn delay={0.3} direction="up" fullWidth>
+                                    <div className="flex items-start gap-5 p-6 rounded-2xl bg-gray-50 border border-gray-100 hover:border-[#CCA43B]/30 transition-all hover:bg-white hover:shadow-lg group">
+                                        <div className="shrink-0 bg-[#202f43] p-3 rounded-xl text-white shadow-md group-hover:scale-110 transition-transform">
                                             <MapPin size={24} />
                                         </div>
                                         <div>
-                                            <p className="text-sm text-gray-500 font-medium">Cobertura</p>
-                                            <p className="text-lg font-bold text-[#202f43]">Ovalle, Chile<br />Región de Coquimbo</p>
-                                            <p className="text-sm text-gray-500">Atención 100% Online y Presencial (Agenda)</p>
+                                            <p className="text-sm text-gray-500 font-bold uppercase tracking-wider mb-1">Oficina Central</p>
+                                            <p className="text-xl font-bold text-[#202f43] mb-1">
+                                                Ovalle, Región de Coquimbo
+                                            </p>
+                                            <p className="text-sm text-gray-400">Atendemos a todo Chile de forma remota.</p>
                                         </div>
                                     </div>
+                                </FadeIn>
+                            </div>
+                        </div>
+
+                        {/* Right Column: Sticky Form */}
+                        <div className="w-full max-w-md lg:ml-auto lg:sticky lg:top-28 lg:mt-9">
+                            <FadeIn direction="left" delay={0.2}>
+                                <div className="bg-[#202f43] p-8 rounded-3xl shadow-2xl border border-gray-700 relative overflow-hidden">
+                                    <div className="absolute top-0 right-0 w-40 h-40 bg-[#CCA43B] rounded-full blur-[80px] opacity-20"></div>
+
+                                    <h3 className="text-2xl font-bold text-white mb-2 relative z-10">Agenda Diagnóstico</h3>
+                                    <p className="text-gray-400 text-sm mb-6 relative z-10">Reunión gratuita de 15 minutos.</p>
+
+                                    <div className="space-y-4 relative z-10">
+                                        <Button
+                                            href="https://wa.me/56967336906"
+                                            className="w-full bg-[#CCA43B] text-[#202f43] hover:bg-[#b88f28] font-bold py-4 text-lg border-0"
+                                        >
+                                            <CalendarCheck className="mr-2 h-5 w-5" /> Agendar Reunión
+                                        </Button>
+                                        <p className="text-xs text-center text-gray-500">
+                                            Te responderemos vía WhatsApp para coordinar.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        </FadeIn>
-
-                        {/* CTA / Form Placeholder */}
-                        <FadeIn delay={0.4} direction="left">
-                            <div className="bg-gradient-to-br from-[#202f43] to-[#15202b] text-white p-8 rounded-2xl shadow-xl flex flex-col justify-center min-h-[400px]">
-                                <h3 className="text-2xl font-bold mb-4">¿Listo para ordenar tus números?</h3>
-                                <p className="text-gray-300 mb-8 leading-relaxed">
-                                    No dejes que la contabilidad frene tu crecimiento. Agenda una reunión de diagnóstico gratuita y veamos cómo podemos potenciar tu empresa.
-                                </p>
-
-                                <Button
-                                    href="https://wa.me/56967336906"
-                                    className="w-full bg-[#CCA43B] text-[#202f43] hover:bg-[#b88f28] font-bold text-lg py-6 shadow-md hover:shadow-lg transition-all"
-                                >
-                                    Agendar Diagnóstico
-                                    <ArrowRight className="ml-2 h-5 w-5" />
-                                </Button>
-                            </div>
-                        </FadeIn>
+                                <div className="mt-8">
+                                    <HeroForm className="!bg-white !text-[#202f43] shadow-xl border-gray-200" />
+                                </div>
+                            </FadeIn>
+                        </div>
                     </div>
                 </div>
             </Section>

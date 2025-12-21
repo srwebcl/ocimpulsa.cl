@@ -1,46 +1,55 @@
 import React from "react";
 import { Button } from "../ui/Button";
 import { Section } from "../ui/Section";
-import { ArrowRight, Building, Rocket, BarChart3 } from "lucide-react";
+import { ArrowRight, Building, Rocket, BarChart3, Monitor } from "lucide-react";
 import { FadeIn } from "../ui/motion/FadeIn";
 
 export const ServicesPreview = () => {
     const stages = [
         {
-            title: "NACER",
-            subtitle: "Formalización",
-            description: "Ideal para quien tiene una idea y quiere su RUT. Creamos tu empresa en un día y te dejamos facturando.",
+            title: "FORMALIZAR",
+            subtitle: "Tu Empresa",
+            description: "Obtén tu RUT y Constitución en 24 horas. Todo listo para facturar.",
             price: "$150.000",
             priceDetail: "Pago único",
             icon: Building,
-            href: "/nacer",
-            // Gold Theme
+            href: "/formalizacion",
             color: "bg-secondary/10 text-secondary",
             cta: "Empezar",
         },
         {
             title: "CRECER",
-            subtitle: "Planes Mensuales",
-            description: "Contabilidad, F29 y RRHH. Mantén tu negocio ordenado y sin multas mientras tú vendes.",
+            subtitle: "Contabilidad",
+            description: "Planes mensuales de contabilidad y RRHH. Orden total ante el SII.",
             price: "$39.000",
             priceDetail: "desde / mes",
             icon: Rocket,
-            href: "/crecer",
-            // Primary Theme
+            href: "/planes-contables",
             color: "bg-primary/10 text-primary",
             cta: "Ver Planes",
             highlight: true
         },
         {
             title: "CONSOLIDAR",
-            subtitle: "Servicios Adicionales",
-            description: "Auditorías, Declaración de Renta, Postulaciones a Corfo/Sercotec para escalar.",
+            subtitle: "Tributaria",
+            description: "Auditorías, F22 y soluciones complejas para empresas maduras.",
             price: "A medida",
-            priceDetail: "según requerimiento",
+            priceDetail: "según caso",
             icon: BarChart3,
-            href: "/consolidar",
+            href: "/tributaria",
             color: "bg-gray-100 text-gray-600",
-            cta: "Más Info",
+            cta: "Soluciones",
+        },
+        {
+            title: "VENDER",
+            subtitle: "Digital",
+            description: "Sitios Web y Google Ads. La máquina de ventas que necesitas.",
+            price: "$180.000",
+            priceDetail: "desde + IVA",
+            icon: Monitor,
+            href: "/digital",
+            color: "bg-orange-100 text-orange-600",
+            cta: "Cotizar Web",
         },
     ];
 
@@ -63,53 +72,53 @@ export const ServicesPreview = () => {
                     </div>
                 </FadeIn>
 
-                <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                     {stages.map((stage, index) => (
-                        <FadeIn key={index} delay={index * 0.2} direction="up" fullWidth>
+                        <FadeIn key={index} delay={index * 0.15} direction="up" fullWidth>
                             <div
-                                className={`relative flex flex-col p-8 rounded-2xl transition-all duration-300 group bg-white h-full ${stage.highlight
+                                className={`relative flex flex-col p-6 rounded-2xl transition-all duration-300 group bg-white h-full ${stage.highlight
                                     ? "border-2 border-[#CCA43B] shadow-[0_0_30px_rgba(204,164,59,0.15)] transform md:-translate-y-4 z-10"
                                     : "border border-gray-100 hover:border-[#CCA43B]/30 hover:shadow-2xl opacity-95 hover:opacity-100"
                                     }`}
                             >
                                 {stage.highlight && (
-                                    <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#CCA43B] text-[#202f43] text-xs font-bold px-6 py-2 rounded-full tracking-widest uppercase shadow-lg border-2 border-[#202f43]">
+                                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#CCA43B] text-[#202f43] text-[10px] font-bold px-4 py-1 rounded-full tracking-widest uppercase shadow-lg border border-[#202f43]">
                                         Más Popular
                                     </div>
                                 )}
 
-                                <div className={`h-14 w-14 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300 ${stage.color}`}>
-                                    <stage.icon size={28} />
+                                <div className={`h-12 w-12 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300 ${stage.color}`}>
+                                    <stage.icon size={24} />
                                 </div>
 
-                                <div className="mb-4">
-                                    <h3 className="text-2xl font-bold text-[#202f43] group-hover:text-[#CCA43B] transition-colors">
+                                <div className="mb-3">
+                                    <h3 className="text-xl font-bold text-[#202f43] group-hover:text-[#CCA43B] transition-colors">
                                         {stage.title}
                                     </h3>
-                                    <p className="text-gray-500 font-medium uppercase tracking-wide text-sm mt-1">
+                                    <p className="text-gray-500 font-medium uppercase tracking-wide text-xs mt-1">
                                         {stage.subtitle}
                                     </p>
                                 </div>
 
-                                <p className="text-gray-500 mb-8 flex-grow leading-relaxed">
+                                <p className="text-gray-500 mb-6 flex-grow leading-relaxed text-sm">
                                     {stage.description}
                                 </p>
 
-                                <div className="mb-8 pt-6 border-t border-gray-100">
-                                    <p className="text-4xl font-bold text-[#202f43] tracking-tight">{stage.price}</p>
-                                    <p className="text-sm text-gray-400 mt-1 font-medium">{stage.priceDetail}</p>
+                                <div className="mb-6 pt-4 border-t border-gray-100">
+                                    <p className="text-3xl font-bold text-[#202f43] tracking-tight">{stage.price}</p>
+                                    <p className="text-xs text-gray-400 mt-1 font-medium">{stage.priceDetail}</p>
                                 </div>
 
                                 <Button
                                     variant={stage.highlight ? "primary" : "outline"}
                                     href={stage.href}
-                                    className={`w-full justify-between h-12 text-sm uppercase tracking-wide ${stage.highlight
+                                    className={`w-full justify-between h-10 text-xs uppercase tracking-wide ${stage.highlight
                                         ? "bg-[#202f43] text-white hover:bg-[#15202b] border-none"
                                         : "border-gray-200 text-[#202f43] hover:border-[#CCA43B] hover:text-[#CCA43B]"
                                         }`}
                                 >
                                     {stage.cta}
-                                    <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                                    <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                                 </Button>
                             </div>
                         </FadeIn>

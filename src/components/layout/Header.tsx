@@ -11,9 +11,10 @@ export const Header = () => {
 
     const navigation = [
         { name: "Inicio", href: "/" },
-        { name: "Planes Mensuales", href: "/crecer" },
-        { name: "Formalización", href: "/nacer" },
-        { name: "Servicios Adicionales", href: "/consolidar" },
+        { name: "Formalización", href: "/formalizacion" },
+        { name: "Contabilidad", href: "/planes-contables" },
+        { name: "Tributaria", href: "/tributaria" },
+        { name: "Digital", href: "/digital" },
     ];
 
     return (
