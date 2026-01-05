@@ -11,11 +11,6 @@ export const Trust = () => {
             description: "Traducimos la complejidad tributaria a tu idioma. Respuestas rápidas, directas y sin tecnicismos innecesarios."
         },
         {
-            icon: ShieldCheck,
-            title: "Gestión 100% Digital",
-            description: "Tu contabilidad ordenada y segura en la nube. Acceso 24/7 a tu información financiera, cero papeleo."
-        },
-        {
             icon: TrendingUp,
             title: "Aliados en tu Crecimiento",
             description: "Nos encargamos de la burocracia y el cumplimiento fiscal para que tú dediques toda tu energía a vender y escalar."
@@ -89,7 +84,7 @@ export const Trust = () => {
                         </p>
 
                         <a
-                            href="https://wa.me/56967336906"
+                            href="https://wa.me/56979567592"
                             className="relative z-10 inline-flex items-center justify-center rounded-xl bg-[#202f43] text-white font-bold px-10 py-5 text-lg hover:bg-[#15202b] transition-all shadow-xl hover:scale-105"
                         >
                             Hablemos por WhatsApp

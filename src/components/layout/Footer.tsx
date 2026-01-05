@@ -40,7 +40,7 @@ export const Footer = () => {
                         </div>
                         <p className="text-sm leading-relaxed max-w-xs text-gray-400">
                             Profesionalismo, Cercanía y Confianza.
-                            Ingeniería contable para empresas que buscan crecer con bases sólidas en el Norte de Chile.
+                            Ingeniería contable para empresas que buscan crecer con bases sólidas.
                         </p>
                         <div className="flex gap-4">
                             <Link href="#" className="hover:text-[#CCA43B] transition-colors"><Facebook size={20} /></Link>
@@ -80,7 +80,7 @@ export const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone size={18} className="text-[#CCA43B] shrink-0" />
-                                <a href="tel:+56967336906" className="hover:text-white transition-colors">+56 9 6733 6906</a>
+                                <a href="tel:+56979567592" className="hover:text-white transition-colors">+569 7956 7592</a>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail size={18} className="text-[#CCA43B] shrink-0" />

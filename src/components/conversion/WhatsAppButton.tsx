@@ -7,7 +7,7 @@ import { cn } from "../ui/Button";
 export const WhatsAppButton = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const phone = "56912345678"; // Replace with verified number
+    const phone = "56979567592"; // Replace with verified number
 
     const options = [
         {

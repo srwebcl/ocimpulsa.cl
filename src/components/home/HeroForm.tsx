@@ -49,7 +49,7 @@ export const HeroForm = ({ className }: HeroFormProps) => {
                 <div className="grid grid-cols-2 gap-4">
                     <input
                         type="text"
-                        placeholder="RUT Empresa"
+                        placeholder="RUT"
                         className="w-full px-4 py-3 rounded-lg bg-[#15202b]/60 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all text-sm hover:border-white/20"
                     />
                     <div className="relative">

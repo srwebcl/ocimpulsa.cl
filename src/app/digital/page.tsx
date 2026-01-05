@@ -205,7 +205,7 @@ export default function DigitalPage() {
                                     </ul>
 
                                     <Button
-                                        href={`https://wa.me/56967336906?text=Hola,%20me%20interesa%20el%20servicio%20${service.title}`}
+                                        href={`https://wa.me/56979567592?text=Hola,%20me%20interesa%20el%20servicio%20${service.title}`}
                                         className={`w-full font-bold py-4 text-base ${service.highlight ? "bg-[#CCA43B] text-[#202f43] hover:bg-[#b88f28] border-0" : "bg-[#202f43] text-white hover:bg-[#15202b] border-0"}`}
                                     >
                                         {service.cta}
@@ -229,7 +229,7 @@ export default function DigitalPage() {
                         </p>
                         <Button
                             size="lg"
-                            href="https://wa.me/56967336906"
+                            href="https://wa.me/56979567592"
                             className="bg-[#202f43] text-white hover:bg-[#15202b] px-10 py-6 text-xl rounded-full shadow-2xl hover:scale-105 transition-transform"
                         >
                             Hablar con Marketing

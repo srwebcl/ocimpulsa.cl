@@ -48,7 +48,7 @@ export default function NosotrosPage() {
 
                     <FadeIn delay={0.5} direction="up">
                         <p className="text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto leading-relaxed">
-                            No somos la típica oficina contable llena de papeles. Somos tecnología, estrategia y cercanía para impulsar negocios en el Norte de Chile.
+                            No somos la típica oficina contable llena de papeles. Somos tecnología, estrategia y cercanía para impulsar negocios.
                         </p>
                     </FadeIn>
                 </div>
@@ -66,17 +66,20 @@ export default function NosotrosPage() {
                                     Nuestra Historia
                                 </span>
                                 <h2 className="text-3xl md:text-4xl font-bold text-[#202f43] mb-6 leading-tight">
-                                    Nacimos para cambiar <br /> las reglas del juego.
+                                    Consultora OC Impulsa
                                 </h2>
                                 <div className="space-y-4 text-gray-600 leading-relaxed text-lg">
                                     <p>
-                                        En OC Impulsa vimos una desconexión: emprendedores llenos de energía frenados por una contabilidad arcaica, lenta y reactiva.
+                                        Nace de la experiencia de Melissa Olivares Cortés, Rodrigo Olivares Cortés y Matías Olivares Cortés, tres hermanos que identificaron una desconexión frecuente entre las pymes y sus asesores contables y financieros.
                                     </p>
                                     <p>
-                                        Decidimos crear algo diferente. Un servicio donde el contador no es el que te regaña por las facturas, sino el que te ayuda a entenderlas. Donde la tecnología hace el trabajo pesado y nosotros ponemos la estrategia.
+                                        Una forma de trabajar que, en lugar de impulsar, muchas veces frenaba el crecimiento de los negocios con una contabilidad desconectada, arcaica, lenta y reactiva.
+                                    </p>
+                                    <p>
+                                        Decidimos crear algo distinto: un servicio donde el contador no es quien te regaña por las facturas, sino quien te ayuda a entenderlas, ordenarlas y usarlas para tomar mejores decisiones.
                                     </p>
                                     <p className="font-bold text-[#202f43]">
-                                        Hoy apoyamos a cientos de PyMEs desde Ovalle hasta Antofagasta, demostrando que el orden financiero es la base de la libertad empresarial.
+                                        Hoy acompañamos a pymes y emprendedores con una asesoría cercana, clara y personalizada, convencidos de que el orden financiero no es un problema, sino la base para crecer con tranquilidad y libertad empresarial.
                                     </p>
                                 </div>
                             </FadeIn>
@@ -95,7 +98,7 @@ export default function NosotrosPage() {
                                             </div>
                                             <h3 className="text-2xl font-bold mb-2">Misión</h3>
                                             <p className="text-gray-300 leading-relaxed">
-                                                Empoderar a las PyMEs con información financiera clara y oportuna, eliminando la burocracia para que puedan escalar sin límites.
+                                                Acompañamos y empoderamos a pymes y emprendedores con un servicio contable y financiero cercano, personalizado y claro, ayudándolos a ordenar su negocio y tomar mejores decisiones para crecer con tranquilidad.
                                             </p>
                                         </div>
                                         <div className="w-full h-px bg-white/10"></div>
@@ -105,7 +108,7 @@ export default function NosotrosPage() {
                                             </div>
                                             <h3 className="text-2xl font-bold mb-2">Visión</h3>
                                             <p className="text-gray-300 leading-relaxed">
-                                                Ser el referente tecnológico y humano en consultoría contable para el norte de Chile, redefiniendo el estándar de servicio profesional.
+                                                Ser una consultora contable-financiera referente, reconocida por su cercanía, alto estándar de servicio y compromiso real con el crecimiento de las pymes.
                                             </p>
                                         </div>
                                     </div>

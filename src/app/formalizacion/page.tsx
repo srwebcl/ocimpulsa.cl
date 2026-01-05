@@ -71,7 +71,7 @@ export default function FormalizaPage() {
                             <Button
                                 variant="outline"
                                 size="lg"
-                                href="https://wa.me/56967336906?text=Hola,%20quiero%20formalizar%20mi%20negocio"
+                                href="https://wa.me/56979567592?text=Hola,%20quiero%20formalizar%20mi%20negocio"
                                 className="border-white/20 text-white hover:bg-white/10 px-8 py-4 text-lg rounded-xl transition-all"
                             >
                                 Consultar Gratis
@@ -220,7 +220,7 @@ export default function FormalizaPage() {
                                 <Button
                                     variant="outline"
                                     className="w-full border-[#202f43] text-[#202f43] hover:bg-[#202f43] hover:text-white"
-                                    href="https://wa.me/56967336906?text=Hola,%20me%20interesa%20el%20Plan%20Formaliza%20Base%20($150.000)"
+                                    href="https://wa.me/56979567592?text=Hola,%20me%20interesa%20el%20Plan%20Formaliza%20Base%20($150.000)"
                                 >
                                     Contratar Plan Base
                                 </Button>
@@ -281,7 +281,7 @@ export default function FormalizaPage() {
 
                                 <Button
                                     className="w-full bg-[#CCA43B] text-[#202f43] hover:bg-[#b88f28] font-bold py-6 text-lg shadow-lg hover:shadow-[#CCA43B]/20 transition-all border-0"
-                                    href="https://wa.me/56967336906?text=Hola,%20quiero%20el%20Plan%20Formaliza%20Online%20($350.000)"
+                                    href="https://wa.me/56979567592?text=Hola,%20quiero%20el%20Plan%20Formaliza%20Online%20($350.000)"
                                 >
                                     Empezar Ahora
                                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -300,11 +300,11 @@ export default function FormalizaPage() {
                             ¿Listo para ser tu propio jefe?
                         </h2>
                         <p className="text-xl text-gray-600 mb-8">
-                            Miles de emprendedores ya confían en OC Impulsa para dar sus primeros pasos. No te quedes atrás.
+                            Confía en OC Impulsa para dar tus primeros pasos. No te quedes atrás y emprende con nosotros
                         </p>
                         <Button
                             size="lg"
-                            href="https://wa.me/56967336906"
+                            href="https://wa.me/56979567592"
                             className="bg-[#202f43] text-white hover:bg-[#15202b] px-10 py-6 text-xl rounded-full shadow-2xl hover:scale-105 transition-transform"
                         >
                             Comenzar Trámite

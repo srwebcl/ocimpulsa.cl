@@ -53,7 +53,7 @@ export const Hero = () => {
                 <FadeIn delay={0.5} direction="up">
                     <p className="text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto leading-relaxed">
                         Nos encargamos de tu <strong>Contabilidad Mensual, Remuneraciones y Cumplimiento Tributario</strong>.
-                        Servicios especializados para <strong>PyMEs y Emprendedores</strong> que buscan orden y tranquilidad en el Norte de Chile.
+                        Servicios especializados para <strong>PyMEs y Emprendedores</strong> que buscan orden y tranquilidad.
                     </p>
                 </FadeIn>
 

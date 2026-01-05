@@ -79,8 +79,8 @@ export default function ContactoPage() {
                                         </div>
                                         <div>
                                             <p className="text-sm text-gray-500 font-bold uppercase tracking-wider mb-1">Llámanos o Escríbenos</p>
-                                            <a href="tel:+56967336906" className="text-2xl font-bold text-[#202f43] block hover:text-[#CCA43B] transition-colors mb-1">
-                                                +56 9 6733 6906
+                                            <a href="tel:+56979567592" className="text-2xl font-bold text-[#202f43] block hover:text-[#CCA43B] transition-colors mb-1">
+                                                +569 7956 7592
                                             </a>
                                             <p className="text-sm text-gray-400">Respuesta inmediata en horario hábil.</p>
                                         </div>

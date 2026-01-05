@@ -81,7 +81,7 @@ export const SmartWhatsAppBtn = () => {
     };
 
     const options = getMenuOptions();
-    const phoneNumber = "56967336906";
+    const phoneNumber = "56979567592";
 
     // Scroll Visibility Logic
     useEffect(() => {

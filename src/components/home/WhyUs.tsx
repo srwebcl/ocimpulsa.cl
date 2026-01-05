@@ -10,7 +10,7 @@ export const WhyUs = () => {
     const benefits = [
         {
             icon: <CheckCircle2 className="w-6 h-6 text-[#CCA43B]" />,
-            title: "Pago de F29 Mensual",
+            title: "Declaración y pago de f29",
             description: "Nos encargamos de declarar y pagar tu IVA mes a mes sin falta."
         },
         {
@@ -20,7 +20,7 @@ export const WhyUs = () => {
         },
         {
             icon: <FileCheck className="w-6 h-6 text-[#CCA43B]" />,
-            title: "Operación Renta (F22)",
+            title: "Declaración y pago de f22",
             description: "Confección de estados financieros y declaración anual sin estrés."
         },
         {

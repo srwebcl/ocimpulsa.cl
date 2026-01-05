@@ -9,7 +9,7 @@ export const ServicesPreview = () => {
         {
             title: "FORMALIZAR",
             subtitle: "Tu Empresa",
-            description: "Obtén tu RUT y Constitución en 24 horas. Todo listo para facturar.",
+            description: "Obtén tu RUT y Constitución en 24 horas.",
             price: "$150.000",
             priceDetail: "Pago único",
             icon: Building,
@@ -54,7 +54,7 @@ export const ServicesPreview = () => {
     ];
 
     return (
-        <Section className="py-20 lg:py-28 bg-gradient-to-b from-[#202f43] to-[#15202b] relative overflow-visible">
+        <Section id="planes" className="py-20 lg:py-28 bg-gradient-to-b from-[#202f43] to-[#15202b] relative overflow-visible">
             <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#CCA43B_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
 
             <div className="container mx-auto px-4 relative z-10">

@@ -185,7 +185,7 @@ export default function TributariaPage() {
                                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#CCA43B] transition-colors">{service.title}</h3>
                                     <p className="text-gray-400 mb-6 text-sm leading-relaxed">{service.description}</p>
                                     <a
-                                        href={`https://wa.me/56967336906?text=Hola,%20consulta%20sobre%20${service.title}`}
+                                        href={`https://wa.me/56979567592?text=Hola,%20consulta%20sobre%20${service.title}`}
                                         className="inline-flex items-center text-sm font-bold text-[#CCA43B] hover:text-white transition-colors"
                                     >
                                         Consultar Detalle <ArrowRight size={16} className="ml-2" />
@@ -209,7 +209,7 @@ export default function TributariaPage() {
                         </p>
                         <Button
                             size="lg"
-                            href="https://wa.me/56967336906"
+                            href="https://wa.me/56979567592"
                             className="bg-[#202f43] text-white hover:bg-[#15202b] px-10 py-6 text-xl rounded-full shadow-2xl hover:scale-105 transition-transform"
                         >
                             Contactar Especialista

@@ -184,7 +184,7 @@ export default function ContabilidadPage() {
                                 <Button
                                     variant="outline"
                                     className="w-full border-[#202f43] text-[#202f43] hover:bg-[#202f43] hover:text-white"
-                                    href="https://wa.me/56967336906?text=Hola,%20me%20interesa%20el%20Plan%20Básico%20Pyme"
+                                    href="https://wa.me/56979567592?text=Hola,%20me%20interesa%20el%20Plan%20Básico%20Pyme"
                                 >
                                     Contratar Plan Básico
                                 </Button>
@@ -239,7 +239,7 @@ export default function ContabilidadPage() {
 
                                 <Button
                                     className="w-full bg-[#CCA43B] text-[#202f43] hover:bg-[#b88f28] font-bold py-4 text-lg border-0"
-                                    href="https://wa.me/56967336906?text=Hola,%20me%20interesa%20el%20Plan%20Recursos%20Humanos"
+                                    href="https://wa.me/56979567592?text=Hola,%20me%20interesa%20el%20Plan%20Recursos%20Humanos"
                                 >
                                     Cotizar Plan RRHH
                                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -262,7 +262,7 @@ export default function ContabilidadPage() {
                         </p>
                         <Button
                             size="lg"
-                            href="https://wa.me/56967336906"
+                            href="https://wa.me/56979567592"
                             className="bg-[#202f43] text-white hover:bg-[#15202b] px-10 py-6 text-xl rounded-full shadow-2xl hover:scale-105 transition-transform"
                         >
                             Hablar con un Contador
