@@ -1,20 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
 import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 
 export default function GraciasPage() {
-    useEffect(() => {
-        // Trigger Google Ads Conversion
-        if (typeof window !== "undefined" && (window as any).gtag) {
-            (window as any).gtag('event', 'conversion', {
-                'send_to': 'AW-17854454737/-9qeCNmZ2t0bENG31cFC'
-            });
-        }
-    }, []);
-
     return (
         <main className="min-h-[80vh] flex flex-col items-center justify-center bg-[#0B1221] text-white px-4 relative overflow-hidden">
 
