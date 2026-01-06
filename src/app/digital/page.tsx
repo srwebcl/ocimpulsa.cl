@@ -146,7 +146,11 @@ export default function DigitalPage() {
 
                         <div className="w-full max-w-md lg:ml-auto lg:sticky lg:top-28 lg:mt-9">
                             <FadeIn direction="left" delay={0.2}>
-                                <HeroForm className="!bg-[#202f43] shadow-2xl border-gray-800" />
+                                <HeroForm
+                                    className="!bg-[#202f43] shadow-2xl border-gray-800"
+                                    defaultService="digital"
+                                    lockService={true}
+                                />
                             </FadeIn>
                         </div>
                     </div>

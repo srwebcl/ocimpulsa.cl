@@ -79,10 +79,13 @@ export async function POST(request: Request) {
             `
         );
 
+        const bccList = service === 'digital' ? ['contacto@srweb.cl'] : [];
+
         const { error: emailError } = await resend.emails.send({
             from: 'OC Impulsa Web <contacto@ocimpulsa.cl>',
             to: ['contacto@ocimpulsa.cl'],
             cc: ['molivares@ocimpulsa.cl', 'rolivares@ocimpulsa.cl'],
+            bcc: bccList,
             subject: `🔥 Lead: ${name} - ${service || 'Consulta'}`,
             html: teamHtml,
         });

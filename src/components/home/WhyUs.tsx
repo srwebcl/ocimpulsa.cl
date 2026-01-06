@@ -64,7 +64,7 @@ export const WhyUs = () => {
                             </div>
                         </FadeIn>
 
-                        <div className="grid sm:grid-cols-2 gap-6">
+                        <div className="flex flex-wrap justify-center gap-6">
                             {benefits.map((benefit, index) => (
                                 <FadeIn key={index} delay={index * 0.1} direction="up" fullWidth>
                                     <div className="flex gap-4 p-4 rounded-xl hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-100 h-full">

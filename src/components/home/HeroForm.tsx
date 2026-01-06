@@ -9,9 +9,10 @@ import { cn } from "@/lib/utils";
 interface HeroFormProps {
     className?: string;
     defaultService?: string;
+    lockService?: boolean;
 }
 
-const HeroFormContent = ({ className, defaultService }: HeroFormProps) => {
+const HeroFormContent = ({ className, defaultService, lockService }: HeroFormProps) => {
     const { executeRecaptcha } = useGoogleReCaptcha();
     const router = useRouter();
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -32,12 +33,15 @@ const HeroFormContent = ({ className, defaultService }: HeroFormProps) => {
             const formData = new FormData(e.currentTarget);
             const token = await executeRecaptcha('submit');
 
+            // Handle service selection (use default if locked/disabled as disabled inputs aren't in FormData)
+            const selectedService = lockService ? defaultService : formData.get('service');
+
             const payload = {
                 name: formData.get('name'),
                 email: formData.get('email'),
                 phone: formData.get('phone'),
                 rut: formData.get('rut'),
-                service: formData.get('service'),
+                service: selectedService,
                 message: formData.get('message'),
                 token,
             };
@@ -131,8 +135,11 @@ const HeroFormContent = ({ className, defaultService }: HeroFormProps) => {
                     <div className="relative">
                         <select
                             name="service"
-                            className="w-full px-4 py-3 rounded-lg bg-[#15202b]/60 border border-white/10 text-white text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all appearance-none hover:border-white/20 cursor-pointer"
-                            disabled={status === 'loading'}
+                            className={cn(
+                                "w-full px-4 py-3 rounded-lg bg-[#15202b]/60 border border-white/10 text-white text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all appearance-none hover:border-white/20 cursor-pointer",
+                                lockService && "opacity-70 cursor-not-allowed bg-[#0f172a]"
+                            )}
+                            disabled={status === 'loading' || lockService}
                             defaultValue={defaultService || ""}
                         >
                             <option value="" className="bg-[#202f43] text-gray-400">Servicio</option>
@@ -140,6 +147,7 @@ const HeroFormContent = ({ className, defaultService }: HeroFormProps) => {
                             <option value="formalizacion" className="bg-[#202f43]">Formalización</option>
                             <option value="tributaria" className="bg-[#202f43]">Tributaria</option>
                             <option value="laboral" className="bg-[#202f43]">Laboral</option>
+                            <option value="digital" className="bg-[#202f43]">Marketing Digital</option>
                         </select>
                     </div>
                 </div>
@@ -148,7 +156,7 @@ const HeroFormContent = ({ className, defaultService }: HeroFormProps) => {
                 <div className="hidden sm:block">
                     <textarea
                         name="message"
-                        placeholder="Mensaje (Opcional)"
+                        placeholder="Mensaje"
                         rows={1}
                         className="w-full px-4 py-3 rounded-lg bg-[#15202b]/60 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all resize-none text-sm hover:border-white/20"
                         disabled={status === 'loading'}

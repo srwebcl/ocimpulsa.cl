@@ -48,7 +48,7 @@ export const Trust = () => {
                 </FadeIn>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 relative z-10">
+            <div className="grid md:grid-cols-2 gap-8 relative z-10 max-w-5xl mx-auto px-4">
                 {benefits.map((benefit, index) => (
                     <FadeIn key={index} delay={index * 0.2} direction="up" fullWidth>
                         <div
