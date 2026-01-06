@@ -7,7 +7,7 @@ import { WhatsAppButton } from "@/components/conversion/WhatsAppButton";
 
 import { SmartWhatsAppBtn } from "@/components/ui/SmartWhatsAppBtn";
 import { CookieConsent } from "@/components/ui/CookieConsent";
-import { GoogleTagManager } from '@next/third-parties/google'
+
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
@@ -30,7 +30,21 @@ export default function RootLayout({
         <Footer />
         <SmartWhatsAppBtn />
         <CookieConsent />
-        <GoogleTagManager gtmId="GTM-XXXXXXX" />
+        {/* Google Analytics & Ads */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-4H23DSS8HR');
+              gtag('config', 'AW-17854454737');
+            `,
+          }}
+        />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4H23DSS8HR"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17854454737"></script>
       </body>
     </html>
   );
