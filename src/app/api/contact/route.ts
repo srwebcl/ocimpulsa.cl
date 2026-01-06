@@ -49,7 +49,7 @@ export async function POST(request: Request) {
         if (emailError) {
             console.error('Error sending team email:', emailError);
             return NextResponse.json(
-                { error: 'Error sending notification email.' },
+                { error: 'Error sending notification email.', details: emailError },
                 { status: 500 }
             );
         }

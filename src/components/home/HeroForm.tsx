@@ -50,7 +50,8 @@ const HeroFormContent = ({ className }: HeroFormProps) => {
             const data = await res.json();
 
             if (!res.ok) {
-                throw new Error(data.error || 'Ocurrió un error al enviar el formulario.');
+                const details = data.details ? ` (${data.details.message || JSON.stringify(data.details)})` : '';
+                throw new Error((data.error || 'Ocurrió un error al enviar el formulario.') + details);
             }
 
             // Success!!
