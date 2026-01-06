@@ -2,15 +2,18 @@
 
 import React, { useState } from "react";
 import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { useRouter } from "next/navigation";
 import { Button } from "../ui/Button";
 import { cn } from "@/lib/utils";
 
 interface HeroFormProps {
     className?: string;
+    defaultService?: string;
 }
 
-const HeroFormContent = ({ className }: HeroFormProps) => {
+const HeroFormContent = ({ className, defaultService }: HeroFormProps) => {
     const { executeRecaptcha } = useGoogleReCaptcha();
+    const router = useRouter();
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -55,7 +58,6 @@ const HeroFormContent = ({ className }: HeroFormProps) => {
             }
 
             // Success!!
-            setStatus('success');
 
             // Push to DataLayer for Conversion Tracking
             if (typeof window !== 'undefined') {
@@ -66,31 +68,15 @@ const HeroFormContent = ({ className }: HeroFormProps) => {
                 });
             }
 
+            // Redirect to Thank You Page
+            router.push('/gracias');
+
         } catch (error: any) {
             console.error("Form submission error:", error);
             setStatus('error');
             setErrorMessage(error.message || 'Error de conexión. Inténtalo nuevamente.');
         }
     };
-
-    if (status === 'success') {
-        return (
-            <div className={cn("bg-[#202f43]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl ring-1 ring-white/5 text-center flex flex-col justify-center items-center h-full min-h-[400px]", className)}>
-                <div className="w-16 h-16 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center mb-4 border border-green-500/30">
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"></path></svg>
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">¡Mensaje Enviado!</h3>
-                <p className="text-gray-300">Gracias por contactarnos. Hemos recibido tus datos correctamente y un asesor te contactará a la brevedad.</p>
-                <Button
-                    variant="outline"
-                    className="mt-6 border-white/20 text-white hover:bg-white/10"
-                    onClick={() => setStatus('idle')}
-                >
-                    Volver al formulario
-                </Button>
-            </div>
-        );
-    }
 
     return (
         <div className={cn("bg-[#202f43]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl animate-in slide-in-from-right-8 duration-1000 ring-1 ring-white/5", className)}>
@@ -147,6 +133,7 @@ const HeroFormContent = ({ className }: HeroFormProps) => {
                             name="service"
                             className="w-full px-4 py-3 rounded-lg bg-[#15202b]/60 border border-white/10 text-white text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all appearance-none hover:border-white/20 cursor-pointer"
                             disabled={status === 'loading'}
+                            defaultValue={defaultService || ""}
                         >
                             <option value="" className="bg-[#202f43] text-gray-400">Servicio</option>
                             <option value="contabilidad" className="bg-[#202f43]">Contabilidad</option>

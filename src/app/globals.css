@@ -142,3 +142,8 @@ h6 {
 .animate-marquee {
   animation: marquee 30s linear infinite;
 }
+
+/* Hide Recaptcha Badge */
+.grecaptcha-badge {
+  visibility: hidden !important;
+}
