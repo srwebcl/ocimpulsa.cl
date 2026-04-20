@@ -19,7 +19,7 @@ interface Review {
 
 const FALLBACK_REVIEWS: Review[] = [
   {
-    authorAttribution: { displayName: "Juan Pérez" },
+    authorAttribution: { displayName: "César González" },
     rating: 5,
     relativePublishTimeDescription: "Hace 1 mes",
     text: { text: "Excelente servicio, muy profesionales y claros en sus explicaciones. Me ayudaron a ordenar mis finanzas de manera impecable." }

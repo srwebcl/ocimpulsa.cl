@@ -6,6 +6,8 @@ import { Section } from "@/components/ui/Section";
 import { CheckCircle, ShieldCheck, ArrowRight, Laptop, Rocket, FileCheck, Clock, Building, BadgeCheck } from "lucide-react";
 import { FadeIn } from "@/components/ui/motion/FadeIn";
 import { HeroForm } from "@/components/home/HeroForm";
+import { Trust } from "@/components/home/Trust";
+import { GoogleReviews } from "@/components/home/GoogleReviews";
 
 export default function FormalizaPage() {
     return (
@@ -295,6 +297,10 @@ export default function FormalizaPage() {
                     </div>
                 </div>
             </Section>
+
+
+            <Trust />
+            <GoogleReviews />
 
             {/* 4. FINAL CTA (Trust style) */}
             <Section className="py-20 bg-white border-t border-gray-100">

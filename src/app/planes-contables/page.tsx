@@ -6,6 +6,8 @@ import { Section } from "@/components/ui/Section";
 import { Check, ArrowRight, Users, Calculator, TrendingUp, ShieldCheck, PieChart, BadgeCheck } from "lucide-react";
 import { FadeIn } from "@/components/ui/motion/FadeIn";
 import { HeroForm } from "@/components/home/HeroForm";
+import { Trust } from "@/components/home/Trust";
+import { GoogleReviews } from "@/components/home/GoogleReviews";
 
 export default function ContabilidadPage() {
     return (
@@ -253,6 +255,10 @@ export default function ContabilidadPage() {
                     </div>
                 </div>
             </Section>
+
+
+            <Trust />
+            <GoogleReviews />
 
             {/* 4. FINAL CTA */}
             <Section className="py-20 bg-white border-t border-gray-100">
