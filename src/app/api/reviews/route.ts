@@ -55,11 +55,23 @@ export async function GET() {
     }));
 
     const finalReviews = formattedReviews.length > 0 ? formattedReviews : FALLBACK_REVIEWS;
+    
+    // Extraer rating general y total de reviews (con fallback)
+    const globalRating = data.place_info?.rating || 5.0;
+    const totalReviews = data.place_info?.reviews || finalReviews.length;
 
-    return NextResponse.json({ reviews: finalReviews });
+    return NextResponse.json({ 
+        reviews: finalReviews,
+        rating: globalRating,
+        totalReviews: totalReviews
+    });
 
   } catch (error: any) {
     console.error('Error fetching reviews via SerpApi:', error.message);
-    return NextResponse.json({ reviews: FALLBACK_REVIEWS });
+    return NextResponse.json({ 
+        reviews: FALLBACK_REVIEWS,
+        rating: 5.0,
+        totalReviews: FALLBACK_REVIEWS.length
+    });
   }
 }

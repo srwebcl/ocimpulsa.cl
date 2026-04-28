@@ -53,9 +53,12 @@ const FALLBACK_REVIEWS: Review[] = [
 
 export const GoogleReviews = () => {
     const [originalReviews, setOriginalReviews] = useState<Review[]>([]);
+    const [globalRating, setGlobalRating] = useState<number>(5.0);
+    const [totalReviews, setTotalReviews] = useState<number>(0);
     const [loading, setLoading] = useState(true);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
+    const [direction, setDirection] = useState(0);
     const [direction, setDirection] = useState(0);
 
     useEffect(() => {
@@ -69,6 +72,8 @@ export const GoogleReviews = () => {
                 const data = await response.json();
                 if (data.reviews && data.reviews.length > 0) {
                     setOriginalReviews(data.reviews);
+                    setGlobalRating(data.rating || 5.0);
+                    setTotalReviews(data.totalReviews || data.reviews.length);
                 } else {
                     setOriginalReviews(FALLBACK_REVIEWS);
                 }
@@ -202,7 +207,7 @@ export const GoogleReviews = () => {
                     <div className="relative overflow-visible">
                         <div className="overflow-hidden py-10 -my-10 px-2 -mx-2">
                              <motion.div 
-                                className={`flex ${!isMobile && reviews.length < 3 ? 'justify-center' : ''}`}
+                                className={`flex items-stretch ${!isMobile && reviews.length < 3 ? 'justify-center' : ''}`}
                                 drag={reviews.length > itemsPerView ? "x" : false}
                                 dragConstraints={{ left: 0, right: 0 }}
                                 onDragEnd={(e, { offset }) => {
@@ -251,9 +256,9 @@ export const GoogleReviews = () => {
                                 <div className="flex gap-1">
                                     {[...Array(5)].map((_, i) => <Star key={i} size={16} className="fill-[#CCA43B] text-[#CCA43B]" />)}
                                 </div>
-                                <span className="text-lg font-black text-[#202f43] ml-3 tracking-tighter">4.9 / 5.0</span>
+                                <span className="text-lg font-black text-[#202f43] ml-3 tracking-tighter">{globalRating.toFixed(1)} / 5.0</span>
                             </div>
-                            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#202f43]/40">Reputación Impecable en Google My Business</p>
+                            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-[#202f43]/40">Reputación Impecable en base a {totalReviews} {totalReviews === 1 ? 'opinión' : 'opiniones'} reales</p>
                         </div>
                     </FadeIn>
                 </div>
