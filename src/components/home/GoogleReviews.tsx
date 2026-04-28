@@ -59,7 +59,6 @@ export const GoogleReviews = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
     const [direction, setDirection] = useState(0);
-    const [direction, setDirection] = useState(0);
 
     useEffect(() => {
         const checkMobile = () => setIsMobile(window.innerWidth < 1024);
