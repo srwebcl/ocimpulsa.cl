@@ -22,8 +22,15 @@ const FALLBACK_REVIEWS = [
 ];
 
 export async function GET() {
-  // SerpApi Key provided by the user. Fallback is hardcoded for safety in production.
-  const apiKey = process.env.SERPAPI_KEY || 'cdf0394e4d61c1772712df0567e07b35aecfe2300a662b5d5530627f7347e4d5';
+  const apiKey = process.env.SERPAPI_KEY;
+  if (!apiKey) {
+    console.warn('SERPAPI_KEY no está configurada. Usando reseñas de respaldo.');
+    return NextResponse.json({ 
+        reviews: FALLBACK_REVIEWS,
+        rating: 5.0,
+        totalReviews: FALLBACK_REVIEWS.length
+    });
+  }
   
   // Exact data_id for 'Consultora OC Impulsa' found via SerpApi Search
   const dataId = '0x25299c2921f4787b:0x6f6b061289689481';
