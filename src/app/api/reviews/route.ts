@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
+  // Use verified Business Profile ID: 13870196654523522838
   const apiKey = process.env.GOOGLE_PLACES_API_KEY;
   if (!apiKey) {
     console.error('GOOGLE_PLACES_API_KEY is not defined');
