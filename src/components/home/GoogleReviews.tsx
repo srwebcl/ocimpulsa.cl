@@ -177,31 +177,36 @@ export const GoogleReviews = () => {
                 {/* Carousel Logic Container */}
                 <div className="relative max-w-[1400px] mx-auto group">
                     
-                    {/* External Control Arrows - Desktop */}
-                    <button 
-                        onClick={prev}
-                        className="absolute -left-4 xl:-left-16 top-1/2 -translate-y-1/2 z-30 w-16 h-16 bg-white shadow-2xl rounded-full text-[#202f43] hover:bg-[#202f43] hover:text-white transition-all hidden lg:flex items-center justify-center border border-gray-100 hover:scale-110 active:scale-95"
-                        aria-label="Anterior"
-                    >
-                        <ChevronLeft size={32} />
-                    </button>
-                    
-                    <button 
-                        onClick={next}
-                        className="absolute -right-4 xl:-right-16 top-1/2 -translate-y-1/2 z-30 w-16 h-16 bg-white shadow-2xl rounded-full text-[#202f43] hover:bg-[#202f43] hover:text-white transition-all hidden lg:flex items-center justify-center border border-gray-100 hover:scale-110 active:scale-95"
-                        aria-label="Siguiente"
-                    >
-                        <ChevronRight size={32} />
-                    </button>
+                    {/* External Control Arrows - Desktop (only show if we can slide) */}
+                    {reviews.length > itemsPerView && (
+                        <>
+                            <button 
+                                onClick={prev}
+                                className="absolute -left-4 xl:-left-16 top-1/2 -translate-y-1/2 z-30 w-16 h-16 bg-white shadow-2xl rounded-full text-[#202f43] hover:bg-[#202f43] hover:text-white transition-all hidden lg:flex items-center justify-center border border-gray-100 hover:scale-110 active:scale-95"
+                                aria-label="Anterior"
+                            >
+                                <ChevronLeft size={32} />
+                            </button>
+                            
+                            <button 
+                                onClick={next}
+                                className="absolute -right-4 xl:-right-16 top-1/2 -translate-y-1/2 z-30 w-16 h-16 bg-white shadow-2xl rounded-full text-[#202f43] hover:bg-[#202f43] hover:text-white transition-all hidden lg:flex items-center justify-center border border-gray-100 hover:scale-110 active:scale-95"
+                                aria-label="Siguiente"
+                            >
+                                <ChevronRight size={32} />
+                            </button>
+                        </>
+                    )}
 
                     {/* Window Wrapper */}
                     <div className="relative overflow-visible">
                         <div className="overflow-hidden py-10 -my-10 px-2 -mx-2">
                              <motion.div 
-                                className="flex"
-                                drag="x"
+                                className={`flex ${!isMobile && reviews.length < 3 ? 'justify-center' : ''}`}
+                                drag={reviews.length > itemsPerView ? "x" : false}
                                 dragConstraints={{ left: 0, right: 0 }}
                                 onDragEnd={(e, { offset }) => {
+                                    if (reviews.length <= itemsPerView) return;
                                     if (offset.x > 50) prev();
                                     else if (offset.x < -50) next();
                                 }}
@@ -222,17 +227,19 @@ export const GoogleReviews = () => {
                         </div>
                     </div>
 
-                    {/* Pagination Indicators - Sleek and Interactive */}
-                    <div className="flex justify-center items-center gap-4 mt-20">
-                        {reviews.map((_, i) => (
-                            <button
-                                key={i}
-                                onClick={() => setCurrentIndex(Math.min(i, maxIndex))}
-                                className={`h-2 transition-all duration-500 rounded-full ${currentIndex === i ? 'w-12 bg-[#CCA43B]' : 'w-3 bg-gray-200 hover:bg-[#CCA43B]/30'}`}
-                                aria-label={`Ir a reseña ${i + 1}`}
-                            />
-                        ))}
-                    </div>
+                    {/* Pagination Indicators - Sleek and Interactive (only if we can slide) */}
+                    {reviews.length > itemsPerView && (
+                        <div className="flex justify-center items-center gap-4 mt-20">
+                            {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => setCurrentIndex(i)}
+                                    className={`h-2 transition-all duration-500 rounded-full ${currentIndex === i ? 'w-12 bg-[#CCA43B]' : 'w-3 bg-gray-200 hover:bg-[#CCA43B]/30'}`}
+                                    aria-label={`Ir a vista ${i + 1}`}
+                                />
+                            ))}
+                        </div>
+                    )}
                 </div>
 
                 {/* Reassurance Footer */}

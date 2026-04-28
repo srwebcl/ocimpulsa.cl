@@ -54,10 +54,7 @@ export async function GET() {
       relativePublishTimeDescription: r.date || "Reciente"
     }));
 
-    // Si hay menos de 3 reviews, rellenamos con las de fallback para que el diseño no se rompa
-    const finalReviews = formattedReviews.length < 3 
-        ? [...formattedReviews, ...FALLBACK_REVIEWS.slice(0, 3 - formattedReviews.length)]
-        : formattedReviews;
+    const finalReviews = formattedReviews.length > 0 ? formattedReviews : FALLBACK_REVIEWS;
 
     return NextResponse.json({ reviews: finalReviews });
 
