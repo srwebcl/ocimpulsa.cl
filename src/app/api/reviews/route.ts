@@ -22,30 +22,36 @@ const FALLBACK_REVIEWS = [
 ];
 
 export async function GET() {
-  const apiKey = process.env.GOOGLE_PLACES_API_KEY || 'AIzaSyDvD-5fcz2EQfv6rlAflZ0nY71OVQlZcs4';
-  const placeId = 'ChIJXWn-pA_FYpYR16l_uB7M_m8'; // ID DEFINITIVO EXTRAÍDO
+  // SerpApi Key provided by the user. Fallback is hardcoded for safety in production.
+  const apiKey = process.env.SERPAPI_KEY || 'cdf0394e4d61c1772712df0567e07b35aecfe2300a662b5d5530627f7347e4d5';
+  
+  // Exact data_id for 'Consultora OC Impulsa' found via SerpApi Search
+  const dataId = '0x25299c2921f4787b:0x6f6b061289689481';
 
   try {
-    const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews,name,rating&key=${apiKey}&language=es`;
+    const url = `https://serpapi.com/search.json?engine=google_maps_reviews&data_id=${dataId}&hl=es&api_key=${apiKey}`;
     
-    const res = await fetch(url, { next: { revalidate: 3600 } });
+    // CACHING IMPORTANTE: Guardamos el resultado por 12 horas (43200 segundos).
+    // Esto asegura que solo hagamos 2 llamadas al día = 60 al mes.
+    // SerpApi regala 100 al mes, por lo que será gratis para siempre.
+    const res = await fetch(url, { next: { revalidate: 43200 } });
     const data = await res.json();
 
-    if (data.status !== 'OK' || !data.result.reviews) {
-      console.error('Google Places API Error:', data.status, data.error_message);
+    if (!data.reviews || data.reviews.length === 0) {
+      console.error('SerpApi Error or No Reviews:', data.error || 'Empty reviews array');
       return NextResponse.json({ reviews: FALLBACK_REVIEWS });
     }
 
-    const formattedReviews = data.result.reviews.map((r: any) => ({
+    const formattedReviews = data.reviews.map((r: any) => ({
       authorAttribution: { 
-        displayName: r.author_name,
-        photoUri: r.profile_photo_url
+        displayName: r.user?.name || "Cliente de Google",
+        photoUri: r.user?.thumbnail || ""
       },
-      rating: r.rating,
+      rating: r.rating || 5,
       text: {
-        text: r.text
+        text: r.snippet || ""
       },
-      relativePublishTimeDescription: r.relative_time_description
+      relativePublishTimeDescription: r.date || "Reciente"
     }));
 
     // Si hay menos de 3 reviews, rellenamos con las de fallback para que el diseño no se rompa
@@ -56,7 +62,7 @@ export async function GET() {
     return NextResponse.json({ reviews: finalReviews });
 
   } catch (error: any) {
-    console.error('Error fetching reviews:', error.message);
+    console.error('Error fetching reviews via SerpApi:', error.message);
     return NextResponse.json({ reviews: FALLBACK_REVIEWS });
   }
 }
