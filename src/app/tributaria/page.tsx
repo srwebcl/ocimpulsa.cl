@@ -162,6 +162,8 @@ export default function TributariaPage() {
                 </div>
             </Section>
 
+            <GoogleReviews />
+
             {/* 3. SERVICES GRID (Dark Premium) */}
             <Section id="servicios" className="py-20 lg:py-28 bg-[#202f43] relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#CCA43B]/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -205,7 +207,6 @@ export default function TributariaPage() {
 
 
             <Trust />
-            <GoogleReviews />
 
             {/* 4. FINAL CTA */}
             <Section className="py-20 bg-white border-t border-gray-100">

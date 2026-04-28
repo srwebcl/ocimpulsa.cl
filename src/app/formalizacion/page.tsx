@@ -174,6 +174,8 @@ export default function FormalizaPage() {
                 </div>
             </Section>
 
+            <GoogleReviews />
+
             {/* 3. PRICING (Dark Section like ServicesPreview) */}
             <Section id="planes" className="py-20 lg:py-28 bg-[#202f43] relative overflow-hidden">
                 {/* Background Effects */}
@@ -300,7 +302,6 @@ export default function FormalizaPage() {
 
 
             <Trust />
-            <GoogleReviews />
 
             {/* 4. FINAL CTA (Trust style) */}
             <Section className="py-20 bg-white border-t border-gray-100">

@@ -140,6 +140,8 @@ export default function ContabilidadPage() {
                 </div>
             </Section>
 
+            <GoogleReviews />
+
             {/* 3. PRICING SECTION */}
             <Section id="planes" className="py-20 lg:py-28 bg-[#202f43] relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#CCA43B]/10 rounded-full blur-[100px] pointer-events-none"></div>
@@ -258,7 +260,6 @@ export default function ContabilidadPage() {
 
 
             <Trust />
-            <GoogleReviews />
 
             {/* 4. FINAL CTA */}
             <Section className="py-20 bg-white border-t border-gray-100">
