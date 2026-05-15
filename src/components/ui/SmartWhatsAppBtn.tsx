@@ -14,7 +14,7 @@ interface MenuOption {
 
 export const SmartWhatsAppBtn = () => {
     const pathname = usePathname();
-    const [isVisible, setIsVisible] = useState(false);
+    const [isVisible] = useState(true);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [showBubble, setShowBubble] = useState(false);
     const [hasInteracted, setHasInteracted] = useState(false);
@@ -83,20 +83,7 @@ export const SmartWhatsAppBtn = () => {
     const options = getMenuOptions();
     const phoneNumber = "56979567592";
 
-    // Scroll Visibility Logic
-    useEffect(() => {
-        const toggleVisibility = () => {
-            if (window.scrollY > 300) {
-                setIsVisible(true);
-            } else {
-                setIsVisible(false);
-                setIsMenuOpen(false); // Close menu if user scrolls back to top
-            }
-        };
 
-        window.addEventListener("scroll", toggleVisibility);
-        return () => window.removeEventListener("scroll", toggleVisibility);
-    }, []);
 
     // Timer for Bubble (Only if Visible by Scroll)
     useEffect(() => {
