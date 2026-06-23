@@ -94,14 +94,14 @@ export const Footer = () => {
             {/* Bottom Bar */}
             <div className="border-t border-[#CCA43B]/20 bg-[#15202b]">
                 <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-screen-2xl py-8">
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-500">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-400">
                         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 order-2 md:order-1 text-center md:text-left">
                             {/* Developer Badge */}
                             <a
                                 href="https://srweb.cl"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-[#CCA43B] transition-colors group bg-white/5 px-3 py-1.5 rounded-full border border-white/5 hover:border-[#CCA43B]/30"
+                                className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-[#CCA43B] transition-colors group bg-white/5 px-3 py-1.5 rounded-full border border-white/5 hover:border-[#CCA43B]/30"
                             >
                                 <span>Desarrollado con</span>
                                 <span className="text-yellow-400 text-sm group-hover:scale-125 transition-transform duration-300">⚡</span>
