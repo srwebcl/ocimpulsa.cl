@@ -15,7 +15,7 @@ export const ServicesPreview = () => {
             icon: Building,
             href: "/formalizacion",
             color: "bg-secondary/10 text-secondary",
-            cta: "Empezar",
+            cta: "Empezar Formalización",
         },
         {
             title: "CRECER",
@@ -26,7 +26,7 @@ export const ServicesPreview = () => {
             icon: Rocket,
             href: "/planes-contables",
             color: "bg-primary/10 text-primary",
-            cta: "Ver Planes",
+            cta: "Ver Planes Contables",
             highlight: true
         },
         {
@@ -38,7 +38,7 @@ export const ServicesPreview = () => {
             icon: BarChart3,
             href: "/tributaria",
             color: "bg-gray-100 text-gray-600",
-            cta: "Soluciones",
+            cta: "Soluciones Tributarias",
         },
         {
             title: "VENDER",
@@ -49,7 +49,7 @@ export const ServicesPreview = () => {
             icon: Monitor,
             href: "/digital",
             color: "bg-orange-100 text-orange-600",
-            cta: "Cotizar Web",
+            cta: "Cotizar Servicios Digitales",
         },
     ];
 

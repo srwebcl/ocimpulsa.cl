@@ -138,7 +138,7 @@ export default function DigitalPage() {
                                             <BarChart3 size={24} />
                                         </div>
                                         <div>
-                                            <h4 className="text-[#202f43] font-bold text-lg">Resultados Medibles</h4>
+                                            <h3 className="text-[#202f43] font-bold text-lg">Resultados Medibles</h3>
                                             <p className="text-gray-500 text-sm mt-1">Sabrás exactamente cuántos clics y contactos generó tu inversión.</p>
                                         </div>
                                     </div>

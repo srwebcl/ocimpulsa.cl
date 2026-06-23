@@ -144,9 +144,9 @@ export const GoogleReviews = () => {
                         )}
                     </div>
                     <div>
-                        <h4 className="font-bold text-[#202f43] text-lg leading-tight uppercase tracking-wide">
+                        <h3 className="font-bold text-[#202f43] text-lg leading-tight uppercase tracking-wide">
                             {review.authorAttribution.displayName}
-                        </h4>
+                        </h3>
                         <div className="flex items-center gap-2 mt-1">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" className="w-3 h-3" alt="Google" />
                             <p className="text-xs text-gray-400 font-semibold">

@@ -72,7 +72,7 @@ export const WhyUs = () => {
                                             {benefit.icon}
                                         </div>
                                         <div>
-                                            <h4 className="text-[#202f43] font-bold text-lg">{benefit.title}</h4>
+                                            <h3 className="text-[#202f43] font-bold text-lg">{benefit.title}</h3>
                                             <p className="text-gray-500 text-sm leading-relaxed mt-1">
                                                 {benefit.description}
                                             </p>

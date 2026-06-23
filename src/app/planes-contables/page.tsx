@@ -110,7 +110,7 @@ export default function ContabilidadPage() {
                                             <Users size={24} />
                                         </div>
                                         <div>
-                                            <h4 className="text-[#202f43] font-bold text-lg">Gestión de Remuneraciones</h4>
+                                            <h3 className="text-[#202f43] font-bold text-lg">Gestión de Remuneraciones</h3>
                                             <p className="text-gray-500 text-sm mt-1">Contratos, finiquitos y pago de imposiciones (Previred) correctos.</p>
                                         </div>
                                     </div>

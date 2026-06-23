@@ -123,6 +123,7 @@ const HeroFormContent = ({ className, defaultService, lockService }: HeroFormPro
                 <div className="relative">
                     <select
                         name="service"
+                        aria-label="Seleccionar servicio de interés"
                         className="w-full px-4 py-3 rounded-lg bg-[#15202b]/60 border border-white/10 text-white text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#CCA43B]/50 focus:border-[#CCA43B] transition-all appearance-none hover:border-white/20 cursor-pointer"
                         disabled={status === 'loading'}
                         defaultValue={defaultService || ""}

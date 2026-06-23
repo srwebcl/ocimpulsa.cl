@@ -143,7 +143,7 @@ export default function TributariaPage() {
                                             <Briefcase size={24} />
                                         </div>
                                         <div>
-                                            <h4 className="text-[#202f43] font-bold text-lg">Defensa Tributaria</h4>
+                                            <h3 className="text-[#202f43] font-bold text-lg">Defensa Tributaria</h3>
                                             <p className="text-gray-500 text-sm mt-1">Te representamos y respondemos ante los organismos fiscalizadores.</p>
                                         </div>
                                     </div>

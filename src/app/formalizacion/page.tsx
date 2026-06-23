@@ -132,7 +132,7 @@ export default function FormalizaPage() {
                                             <Building size={24} />
                                         </div>
                                         <div>
-                                            <h4 className="text-[#202f43] font-bold text-lg">Protege tu Patrimonio</h4>
+                                            <h3 className="text-[#202f43] font-bold text-lg">Protege tu Patrimonio</h3>
                                             <p className="text-gray-500 text-sm mt-1">Separa tus finanzas personales de las del negocio legalmente.</p>
                                         </div>
                                     </div>
