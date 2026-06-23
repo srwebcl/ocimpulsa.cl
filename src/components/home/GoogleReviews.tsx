@@ -125,7 +125,7 @@ export const GoogleReviews = () => {
                 <div className="relative flex-grow">
                     <Quote className="absolute -top-6 -left-6 text-[#CCA43B]/5 w-20 h-20 pointer-events-none group-hover:text-[#CCA43B]/10 transition-colors" />
                     <p className="text-[#202f43]/80 text-lg leading-relaxed italic mb-10 relative z-10 font-medium">
-                        "{review.text.text}"
+                        &quot;{review.text.text}&quot;
                     </p>
                 </div>
 
