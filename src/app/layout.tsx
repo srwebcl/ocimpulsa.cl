@@ -12,6 +12,9 @@ const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.ocimpulsa.cl'),
+  alternates: {
+    canonical: '/',
+  },
   title: "OC Impulsa | Asesoría Contable, Tributaria y Financiera",
   description: "Expertos en contabilidad, planificación tributaria, formalización de empresas y asesoría laboral para Pymes en Chile. Impulsamos el crecimiento de tu negocio.",
   keywords: [
@@ -73,7 +76,8 @@ const schemaData = {
   "areaServed": ["Ovalle", "Coquimbo", "La Serena", "Vallenar", "Copiapó", "Caldera", "Antofagasta"],
   "priceRange": "$$",
   "sameAs": [
-    "https://www.instagram.com/consultoraoc/"
+    "https://www.instagram.com/consultoraoc/",
+    "https://share.google/1sHXUAg9ojKlf9RHM"
   ]
 };
 
