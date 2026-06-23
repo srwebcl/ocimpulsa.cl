@@ -174,7 +174,14 @@ const HeroFormContent = ({ className, defaultService, lockService }: HeroFormPro
 
 export const HeroForm = (props: HeroFormProps) => {
     return (
-        <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LcKJEIsAAAAABvbX4CbESgjidz_PxXEQ4jAsJ-h"}>
+        <GoogleReCaptchaProvider 
+            reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LcKJEIsAAAAABvbX4CbESgjidz_PxXEQ4jAsJ-h"}
+            scriptProps={{
+                async: true,
+                defer: true,
+                appendTo: "body"
+            }}
+        >
             <HeroFormContent {...props} />
         </GoogleReCaptchaProvider>
     );

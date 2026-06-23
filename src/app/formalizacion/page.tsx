@@ -23,6 +23,7 @@ export default function FormalizaPage() {
                         alt="Formalización de Empresas"
                         fill
                         priority
+                        unoptimized={true}
                         sizes="100vw"
                         quality={85}
                         className="object-cover opacity-60"

@@ -55,6 +55,7 @@ export default function TributariaPage() {
                         alt="Asesoría Tributaria"
                         fill
                         priority
+                        unoptimized={true}
                         sizes="100vw"
                         quality={85}
                         className="object-cover opacity-60"

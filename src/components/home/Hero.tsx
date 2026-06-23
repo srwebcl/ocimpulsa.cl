@@ -39,6 +39,7 @@ export const Hero = () => {
                         alt="Background"
                         fill
                         priority={activeIndex === 0}
+                        unoptimized={true}
                         sizes="100vw"
                         quality={85}
                         initial={{ opacity: 0, scale: 1 }}
