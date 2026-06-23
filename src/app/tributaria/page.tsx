@@ -50,7 +50,7 @@ export default function TributariaPage() {
             <Section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20 lg:py-28">
                 <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
                     <img
-                        src="/images/tributaria.png"
+                        src="/images/tributaria.jpg"
                         alt="Asesoría Tributaria"
                         className="absolute min-w-full min-h-full object-cover w-full h-full opacity-60"
                     />

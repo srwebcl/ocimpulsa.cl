@@ -18,7 +18,7 @@ export default function FormalizaPage() {
                 {/* Image Background */}
                 <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
                     <img
-                        src="/images/formaliza.png"
+                        src="/images/formaliza.jpg"
                         alt="Formalización de Empresas"
                         className="absolute min-w-full min-h-full object-cover w-full h-full opacity-60"
                     />

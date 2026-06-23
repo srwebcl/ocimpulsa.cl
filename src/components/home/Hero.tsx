@@ -8,10 +8,10 @@ import { FadeIn } from "../ui/motion/FadeIn";
 import { motion, AnimatePresence } from "framer-motion";
 
 const bgImages = [
-    "/images/tributaria.png",
-    "/images/formaliza.png",
-    "/images/desarrollo-web.png",
-    "/images/contabilidad.png",
+    "/images/tributaria.jpg",
+    "/images/formaliza.jpg",
+    "/images/desarrollo-web.jpg",
+    "/images/contabilidad.jpg",
 ];
 
 export const Hero = () => {
