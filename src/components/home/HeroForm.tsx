@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { useInView } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { Button } from "../ui/Button";
 import { cn } from "@/lib/utils";
@@ -174,16 +175,38 @@ const HeroFormContent = ({ className, defaultService, lockService }: HeroFormPro
 };
 
 export const HeroForm = (props: HeroFormProps) => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "200px" });
+
     return (
-        <GoogleReCaptchaProvider 
-            reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LcKJEIsAAAAABvbX4CbESgjidz_PxXEQ4jAsJ-h"}
-            scriptProps={{
-                async: true,
-                defer: true,
-                appendTo: "body"
-            }}
-        >
-            <HeroFormContent {...props} />
-        </GoogleReCaptchaProvider>
+        <div ref={ref}>
+            {isInView ? (
+                <GoogleReCaptchaProvider 
+                    reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "6LcKJEIsAAAAABvbX4CbESgjidz_PxXEQ4jAsJ-h"}
+                    scriptProps={{
+                        async: true,
+                        defer: true,
+                        appendTo: "body"
+                    }}
+                >
+                    <HeroFormContent {...props} />
+                </GoogleReCaptchaProvider>
+            ) : (
+                // Dummy visual placeholder to avoid CLS before ReCAPTCHA script loads
+                <div className={cn("bg-[#202f43]/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-2xl ring-1 ring-white/5 opacity-50", props.className)}>
+                    <div className="mb-5 text-center">
+                        <h3 className="text-2xl font-bold text-white tracking-tight mb-1">Agenda tu Diagnóstico</h3>
+                        <p className="text-gray-300 text-sm font-medium tracking-wide">Nos pondremos en contacto contigo hoy.</p>
+                    </div>
+                    <div className="space-y-4">
+                        <div className="w-full px-4 py-3 h-12 rounded-lg bg-[#15202b]/60 border border-white/10" />
+                        <div className="w-full px-4 py-3 h-12 rounded-lg bg-[#15202b]/60 border border-white/10" />
+                        <div className="w-full px-4 py-3 h-12 rounded-lg bg-[#15202b]/60 border border-white/10" />
+                        <div className="w-full px-4 py-3 h-12 rounded-lg bg-[#15202b]/60 border border-white/10" />
+                        <div className="w-full py-4 h-[56px] mt-2 rounded-lg bg-[#CCA43B]/20" />
+                    </div>
+                </div>
+            )}
+        </div>
     );
 }

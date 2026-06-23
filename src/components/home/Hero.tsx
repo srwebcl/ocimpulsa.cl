@@ -3,10 +3,16 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Button } from "../ui/Button";
+import dynamic from 'next/dynamic';
 import { Section } from "../ui/Section";
 import { CheckCircle, MapPin } from "lucide-react";
 import { FadeIn } from "../ui/motion/FadeIn";
 import { motion, AnimatePresence } from "framer-motion";
+
+const DynamicHeroForm = dynamic(() => import('./HeroForm').then(mod => mod.HeroForm), { 
+    ssr: false,
+    loading: () => <div className="h-[520px] w-full bg-[#202f43]/80 backdrop-blur-xl border border-white/10 rounded-2xl animate-pulse shadow-2xl ring-1 ring-white/5"></div>
+});
 
 const MotionImage = motion(Image);
 
