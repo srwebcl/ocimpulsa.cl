@@ -57,6 +57,26 @@ export const metadata: Metadata = {
   },
 };
 
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "Consultora OC",
+  "image": "https://www.ocimpulsa.cl/images/logo-white.svg",
+  "url": "https://www.ocimpulsa.cl",
+  "telephone": "+56979567592",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ovalle",
+    "addressRegion": "Coquimbo",
+    "addressCountry": "CL"
+  },
+  "areaServed": ["Ovalle", "Coquimbo", "La Serena", "Vallenar", "Copiapó", "Caldera", "Antofagasta"],
+  "priceRange": "$$",
+  "sameAs": [
+    "https://www.instagram.com/consultoraoc/"
+  ]
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -64,6 +84,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+      </head>
       <body className={`${inter.variable} ${outfit.variable} font-sans antialiased`} suppressHydrationWarning>
         <GoogleTagManager gtmId="GTM-NRBTMTMV" />
         <Header />

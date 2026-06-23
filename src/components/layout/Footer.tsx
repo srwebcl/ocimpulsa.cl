@@ -43,7 +43,7 @@ export const Footer = () => {
                             Ingeniería contable para empresas que buscan crecer con bases sólidas.
                         </p>
                         <div className="flex gap-4">
-                            <a href="https://www.instagram.com/consultoraoc/" target="_blank" rel="noopener noreferrer" className="hover:text-[#CCA43B] transition-colors"><Instagram size={20} /></a>
+                            <a href="https://www.instagram.com/consultoraoc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Consultora OC" className="hover:text-[#CCA43B] transition-colors"><Instagram size={20} /></a>
                         </div>
                     </div>
 

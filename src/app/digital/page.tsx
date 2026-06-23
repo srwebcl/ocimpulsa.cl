@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Section } from "@/components/ui/Section";
 import { Cpu, Monitor, Zap, Search, ArrowRight, MousePointerClick, BarChart3, Rocket } from "lucide-react";
@@ -44,10 +45,14 @@ export default function DigitalPage() {
             {/* 1. HERO SECTION */}
             <Section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20 lg:py-28">
                 <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
-                    <img
+                    <Image
                         src="/images/desarrollo-web.jpg"
                         alt="Servicios Digitales"
-                        className="absolute min-w-full min-h-full object-cover w-full h-full opacity-60"
+                        fill
+                        priority
+                        sizes="100vw"
+                        quality={85}
+                        className="object-cover opacity-60"
                     />
                     <div className="absolute inset-0 bg-[#202f43]/85 mix-blend-multiply"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-[#202f43] via-transparent to-[#202f43]/40"></div>

@@ -77,7 +77,7 @@ export const SmartWhatsAppBtn = () => {
                                     onClick={handleClick}
                                 >
                                     <span className="text-xs font-bold text-[#202f43]">{getGreeting()}</span>
-                                    <button onClick={handleCloseBubble} className="bg-gray-100 rounded-full p-0.5 text-gray-400 hover:text-red-500">
+                                    <button onClick={handleCloseBubble} aria-label="Cerrar mensaje" className="bg-gray-100 rounded-full p-0.5 text-gray-400 hover:text-red-500">
                                         <X size={10} />
                                     </button>
                                 </motion.div>
@@ -89,6 +89,7 @@ export const SmartWhatsAppBtn = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={handleClick}
+                            aria-label="Contactar por WhatsApp"
                             className="flex items-center justify-center w-14 h-14 lg:w-16 lg:h-16 rounded-full shadow-2xl transition-all duration-300 border-2 border-white/20 relative z-50 bg-[#25D366]"
                         >
                             <>

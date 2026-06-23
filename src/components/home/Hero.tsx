@@ -1,11 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { Button } from "../ui/Button";
 import { Section } from "../ui/Section";
 import { CheckCircle, MapPin } from "lucide-react";
 import { FadeIn } from "../ui/motion/FadeIn";
 import { motion, AnimatePresence } from "framer-motion";
+
+const MotionImage = motion(Image);
 
 const bgImages = [
     "/images/tributaria.jpg",
@@ -30,10 +33,14 @@ export const Hero = () => {
             {/* Image Slideshow Background with Ken Burns */}
             <div className="absolute inset-0 z-0 w-full h-full overflow-hidden bg-[#15202b]">
                 <AnimatePresence initial={false}>
-                    <motion.img
+                    <MotionImage
                         key={activeIndex}
                         src={bgImages[activeIndex]}
                         alt="Background"
+                        fill
+                        priority={activeIndex === 0}
+                        sizes="100vw"
+                        quality={85}
                         initial={{ opacity: 0, scale: 1 }}
                         animate={{ opacity: 0.6, scale: 1.25 }}
                         exit={{ opacity: 0 }}
@@ -41,7 +48,7 @@ export const Hero = () => {
                             opacity: { duration: 1.5, ease: "easeInOut" },
                             scale: { duration: 8, ease: "linear" }
                         }}
-                        className="absolute inset-0 w-full h-full object-cover origin-center"
+                        className="object-cover origin-center"
                     />
                 </AnimatePresence>
                 {/* Gradient Overlay for Text Readability - Corporate Navy tint */}

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Section } from "@/components/ui/Section";
 import { CheckCircle, ShieldCheck, ArrowRight, Laptop, Rocket, FileCheck, Clock, Building, BadgeCheck } from "lucide-react";
@@ -17,10 +18,14 @@ export default function FormalizaPage() {
             <Section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20 lg:py-28">
                 {/* Image Background */}
                 <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
-                    <img
+                    <Image
                         src="/images/formaliza.jpg"
                         alt="Formalización de Empresas"
-                        className="absolute min-w-full min-h-full object-cover w-full h-full opacity-60"
+                        fill
+                        priority
+                        sizes="100vw"
+                        quality={85}
+                        className="object-cover opacity-60"
                     />
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-[#202f43]/80 mix-blend-multiply"></div>
