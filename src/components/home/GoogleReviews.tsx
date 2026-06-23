@@ -104,13 +104,14 @@ export const GoogleReviews = () => {
 
     // Auto-play
     useEffect(() => {
+        if (!isMobile) return;
         const interval = setInterval(next, 6000);
         return () => clearInterval(interval);
-    }, [next]);
+    }, [next, isMobile]);
 
     const ReviewCard = ({ review }: { review: Review }) => (
-        <div className="flex-none w-full md:w-1/2 lg:w-1/3 px-4 shrink-0 h-full">
-            <div className="bg-white p-8 lg:p-10 rounded-3xl shadow-[0_20px_50px_-15px_rgba(32,47,67,0.08)] border border-gray-100/50 h-full flex flex-col group hover:shadow-[0_30px_60px_-15px_rgba(204,164,59,0.1)] transition-all duration-500 hover:-translate-y-1">
+        <div className="flex-none w-full md:w-1/2 lg:w-1/3 px-4 shrink-0 flex">
+            <div className="bg-white p-8 lg:p-10 rounded-3xl shadow-[0_20px_50px_-15px_rgba(32,47,67,0.08)] border border-gray-100/50 w-full flex flex-col group hover:shadow-[0_30px_60px_-15px_rgba(204,164,59,0.1)] transition-all duration-500 hover:-translate-y-1">
                 <div className="flex items-center gap-1 mb-6">
                     {[...Array(5)].map((_, i) => (
                         <Star 

@@ -3,11 +3,13 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Button } from "../ui/Button";
 import { Menu, X } from "lucide-react";
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const pathname = usePathname();
 
     const navigation = [
         { name: "Inicio", href: "/" },
@@ -35,15 +37,18 @@ export const Header = () => {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center gap-8">
-                        {navigation.map((item) => (
-                            <Link
-                                key={item.name}
-                                href={item.href}
-                                className="text-gray-300 hover:text-[#CCA43B] font-medium transition-colors text-sm lg:text-base tracking-wide"
-                            >
-                                {item.name}
-                            </Link>
-                        ))}
+                        {navigation.map((item) => {
+                            const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
+                            return (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    className={`transition-colors text-sm lg:text-base tracking-wide ${isActive ? "font-bold text-[#CCA43B]" : "font-medium text-gray-300 hover:text-[#CCA43B]"}`}
+                                >
+                                    {item.name}
+                                </Link>
+                            );
+                        })}
                     </nav>
 
                     {/* Desktop CTA */}
@@ -57,7 +62,7 @@ export const Header = () => {
                             <span className="bg-white/20 p-1 rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></svg>
                             </span>
-                            Solicitar Ayuda
+                            Contacto
                         </Button>
                     </div>
 
@@ -76,16 +81,19 @@ export const Header = () => {
             {isMenuOpen && (
                 <div className="md:hidden absolute top-20 left-0 w-full bg-[#202f43] border-b border-gray-800 shadow-xl py-6 animate-in slide-in-from-top-4">
                     <div className="flex flex-col container mx-auto px-4 gap-4">
-                        {navigation.map((item) => (
-                            <Link
-                                key={item.name}
-                                href={item.href}
-                                className="text-lg font-medium text-gray-300 hover:text-[#CCA43B] py-3 border-b border-gray-800 last:border-0"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                {item.name}
-                            </Link>
-                        ))}
+                        {navigation.map((item) => {
+                            const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
+                            return (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    className={`text-lg py-3 border-b border-gray-800 last:border-0 ${isActive ? "font-bold text-[#CCA43B]" : "font-medium text-gray-300 hover:text-[#CCA43B]"}`}
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    {item.name}
+                                </Link>
+                            );
+                        })}
                         <div className="pt-4">
                             <Button
                                 variant="secondary"
@@ -94,7 +102,7 @@ export const Header = () => {
                                 href="/contacto"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /></svg>
-                                Solicitar Ayuda
+                                Contacto
                             </Button>
                         </div>
                     </div>

@@ -15,17 +15,13 @@ export default function FormalizaPage() {
 
             {/* 1. HERO SECTION (Video BG, Dark, Impactful) */}
             <Section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20 lg:py-28">
-                {/* Video Background */}
+                {/* Image Background */}
                 <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
-                    <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
+                    <img
+                        src="/images/formaliza.png"
+                        alt="Formalización de Empresas"
                         className="absolute min-w-full min-h-full object-cover w-full h-full opacity-60"
-                    >
-                        <source src="/images/hero-video.mp4" type="video/mp4" />
-                    </video>
+                    />
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-[#202f43]/80 mix-blend-multiply"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-[#202f43] via-transparent to-[#202f43]/40"></div>
@@ -55,7 +51,7 @@ export default function FormalizaPage() {
                     {/* Subheadline */}
                     <FadeIn delay={0.5} direction="up">
                         <p className="text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto leading-relaxed">
-                            Olvídate de notariats, filas y trámites eternos. Te entregamos tu empresa <strong>lista para facturar</strong>, con RUT, cuenta bancaria y claves del SII.
+                            Olvídate de notarías, filas y trámites eternos. Te entregamos tu empresa <strong>lista para facturar</strong>, con RUT, cuenta bancaria y claves del SII.
                         </p>
                     </FadeIn>
 
@@ -197,105 +193,172 @@ export default function FormalizaPage() {
                         </div>
                     </FadeIn>
 
-                    <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start max-w-5xl mx-auto">
-                        {/* Plan Base */}
-                        <FadeIn delay={0.2} direction="right" fullWidth>
-                            <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100 h-full flex flex-col relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
-                                <h3 className="text-2xl font-bold text-[#202f43] mb-2">Formaliza tu Negocio</h3>
-                                <p className="text-gray-500 text-sm mb-6">La base legal sólida que necesitas.</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch max-w-7xl mx-auto">
+                        
+                        {/* 1. Pack Digital */}
+                        <FadeIn delay={0.1} direction="up" fullWidth fullHeight>
+                            <div className="bg-gradient-to-br from-[#1e2a3b] to-[#15202b] text-white p-6 rounded-2xl shadow-2xl border border-[#CCA43B] h-full flex flex-col relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-[#CCA43B] rounded-full blur-[60px] opacity-20"></div>
 
-                                <div className="flex items-baseline gap-1 mb-8">
-                                    <span className="text-4xl font-bold text-[#202f43]">$150.000</span>
-                                    <span className="text-gray-400 text-sm">+ Costos notariales</span>
-                                </div>
-
-                                <ul className="space-y-4 mb-8 flex-grow">
-                                    {[
-                                        "Constitución de Sociedad",
-                                        "Inicio de Actividades SII",
-                                        "Verificación de Actividad",
-                                        "Habilitación Facturación",
-                                        "Asesoría Boleta Electrónica",
-                                        "Obtención de E-RUT"
-                                    ].map((item, i) => (
-                                        <li key={i} className="flex items-start gap-3">
-                                            <CheckCircle className="text-gray-400 shrink-0 mt-1" size={18} />
-                                            <span className="text-gray-700 font-medium text-sm">{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-
-                                <Button
-                                    variant="outline"
-                                    className="w-full border-[#202f43] text-[#202f43] hover:bg-[#202f43] hover:text-white"
-                                    href="https://wa.me/56979567592?text=Hola,%20me%20interesa%20el%20Plan%20Formaliza%20Base%20($150.000)"
-                                >
-                                    Contratar Plan Base
-                                </Button>
-                            </div>
-                        </FadeIn>
-
-                        {/* Plan Full Online - Highlighted */}
-                        <FadeIn delay={0.4} direction="left" fullWidth>
-                            <div className="bg-gradient-to-br from-[#1e2a3b] to-[#15202b] text-white p-8 rounded-2xl shadow-2xl border border-[#CCA43B] h-full flex flex-col relative overflow-hidden transform md:-translate-y-6">
-                                <div className="absolute top-0 right-0 w-48 h-48 bg-[#CCA43B] rounded-full blur-[80px] opacity-20"></div>
-
-                                <div className="absolute top-4 right-4 bg-[#CCA43B] text-[#202f43] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                                <div className="absolute top-3 right-3 bg-[#CCA43B] text-[#202f43] text-[9px] font-bold px-2 py-1 rounded-full uppercase tracking-wider shadow-lg">
                                     Más Vendido
                                 </div>
 
                                 <div className="mb-2 flex items-center gap-2 text-[#CCA43B]">
-                                    <Rocket size={20} />
-                                    <span className="text-sm font-bold tracking-widest uppercase">Pack Digital</span>
+                                    <Rocket size={18} />
+                                    <span className="text-xs font-bold tracking-widest uppercase">Pack Digital</span>
                                 </div>
 
-                                <h3 className="text-3xl font-bold mb-2">Formaliza Online</h3>
-                                <p className="text-gray-300 text-sm mb-6">Empieza vendiendo desde el primer día.</p>
+                                <h3 className="text-2xl font-bold mb-2">Formaliza Online</h3>
+                                <p className="text-gray-300 text-xs mb-6 h-12">Para quienes buscan digitalizar todo desde el principio y empezar vendiendo online de inmediato.</p>
 
-                                <div className="flex items-baseline gap-1 mb-8">
-                                    <span className="text-5xl font-bold text-[#CCA43B]">$350.000</span>
-                                    <span className="text-gray-400 text-sm">Pago Único</span>
+                                <div className="flex items-baseline gap-1 mb-6">
+                                    <span className="text-4xl font-bold text-[#CCA43B]">$350.000</span>
                                 </div>
 
-                                <div className="space-y-6 mb-8 flex-grow">
-                                    <div className="p-4 bg-white/5 rounded-lg border border-white/10">
-                                        <p className="font-bold text-[#CCA43B] mb-2 flex items-center gap-2">
-                                            <CheckCircle size={16} /> Incluye Plan Base Completo
+                                <div className="space-y-4 mb-8 flex-grow">
+                                    <div className="p-3 bg-white/5 rounded-lg border border-white/10">
+                                        <p className="font-bold text-[#CCA43B] mb-1 flex items-center gap-2 text-sm">
+                                            <CheckCircle size={14} /> Incluye Formaliza tu Negocio
                                         </p>
-                                        <p className="text-xs text-gray-400 pl-6">Constitución, SII, RUT, Facturación...</p>
                                     </div>
 
-                                    <ul className="space-y-4">
-                                        <li className="flex items-start gap-3">
-                                            <div className="bg-[#CCA43B]/20 p-1.5 rounded-lg text-[#CCA43B] mt-0.5">
-                                                <Laptop size={16} />
+                                    <ul className="space-y-3">
+                                        <li className="flex items-start gap-2">
+                                            <div className="bg-[#CCA43B]/20 p-1 rounded-lg text-[#CCA43B]">
+                                                <Laptop size={14} />
                                             </div>
                                             <div>
-                                                <span className="font-bold block">Diseño de Sitio Web</span>
-                                                <span className="text-xs text-gray-400">One-page profesional</span>
+                                                <span className="font-bold block text-sm">Diseño de Sitio Web</span>
                                             </div>
                                         </li>
-                                        <li className="flex items-start gap-3">
-                                            <div className="bg-[#CCA43B]/20 p-1.5 rounded-lg text-[#CCA43B] mt-0.5">
-                                                <Rocket size={16} />
+                                        <li className="flex items-start gap-2">
+                                            <div className="bg-[#CCA43B]/20 p-1 rounded-lg text-[#CCA43B]">
+                                                <Rocket size={14} />
                                             </div>
                                             <div>
-                                                <span className="font-bold block">Campaña Google Ads</span>
-                                                <span className="text-xs text-gray-400">Configuración profesional</span>
+                                                <span className="font-bold block text-sm">Campaña Google Ads</span>
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
 
                                 <Button
-                                    className="w-full bg-[#CCA43B] text-[#202f43] hover:bg-[#b88f28] font-bold py-6 text-lg shadow-lg hover:shadow-[#CCA43B]/20 transition-all border-0"
-                                    href="https://wa.me/56979567592?text=Hola,%20quiero%20el%20Plan%20Formaliza%20Online%20($350.000)"
+                                    className="w-full bg-[#CCA43B] text-[#202f43] hover:bg-[#b88f28] font-bold py-5 text-sm shadow-lg hover:shadow-[#CCA43B]/20 transition-all border-0"
+                                    href="https://wa.me/56979567592?text=Hola,%20quiero%20el%20Pack%20Digital%20($350.000)"
                                 >
                                     Empezar Ahora
-                                    <ArrowRight className="ml-2 h-5 w-5" />
                                 </Button>
                             </div>
                         </FadeIn>
+
+                        {/* 2. Inicio de Actividades */}
+                        <FadeIn delay={0.2} direction="up" fullWidth fullHeight>
+                            <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 h-full flex flex-col relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+                                <h3 className="text-xl font-bold text-[#202f43] mb-2">Inicio de Actividades</h3>
+                                <p className="text-gray-500 text-xs mb-6 h-12">Para quienes ya constituyeron su empresa y necesitan realizar el inicio de actividades ante el SII.</p>
+
+                                <div className="flex items-baseline gap-1 mb-6">
+                                    <span className="text-3xl font-bold text-[#202f43]">$45.000</span>
+                                </div>
+
+                                <ul className="space-y-3 mb-8 flex-grow">
+                                    {[
+                                        "Inicio de actividades",
+                                        "Verificación de actividades",
+                                        "Verificación de domicilio"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-2">
+                                            <CheckCircle className="text-[#CCA43B] shrink-0 mt-0.5" size={16} />
+                                            <span className="text-gray-700 font-medium text-xs leading-tight">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+
+                                <Button
+                                    variant="outline"
+                                    className="w-full border-[#202f43] text-[#202f43] hover:bg-[#202f43] hover:text-white py-5 text-sm mt-auto"
+                                    href="https://wa.me/56979567592?text=Hola,%20me%20interesa%20el%20Plan%20Inicio%20de%20Actividades%20($45.000)"
+                                >
+                                    Contratar Plan
+                                </Button>
+                            </div>
+                        </FadeIn>
+
+                        {/* 3. Empieza a Facturar */}
+                        <FadeIn delay={0.3} direction="up" fullWidth fullHeight>
+                            <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 h-full flex flex-col relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+                                <h3 className="text-xl font-bold text-[#202f43] mb-2">Empieza a Facturar</h3>
+                                <p className="text-gray-500 text-xs mb-6 h-12">Para empresas constituidas que necesitan habilitarse para emitir documentos tributarios.</p>
+
+                                <div className="flex items-baseline gap-1 mb-6">
+                                    <span className="text-3xl font-bold text-[#202f43]">$95.000</span>
+                                </div>
+
+                                <ul className="space-y-3 mb-8 flex-grow">
+                                    {[
+                                        "Inicio de actividades",
+                                        "Verificación de actividades",
+                                        "Verificación de domicilio",
+                                        "Instalación de certificado digital",
+                                        "Habilitación para facturar",
+                                        "Asesoría en boletas electrónicas y facturación",
+                                        "Obtención de E-RUT"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-2">
+                                            <CheckCircle className="text-[#CCA43B] shrink-0 mt-0.5" size={16} />
+                                            <span className="text-gray-700 font-medium text-xs leading-tight">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+
+                                <Button
+                                    variant="outline"
+                                    className="w-full border-[#202f43] text-[#202f43] hover:bg-[#202f43] hover:text-white py-5 text-sm mt-auto"
+                                    href="https://wa.me/56979567592?text=Hola,%20me%20interesa%20el%20Plan%20Empieza%20a%20Facturar%20($95.000)"
+                                >
+                                    Contratar Plan
+                                </Button>
+                            </div>
+                        </FadeIn>
+
+                        {/* 4. Formaliza tu Negocio */}
+                        <FadeIn delay={0.4} direction="up" fullWidth fullHeight>
+                            <div className="bg-white p-6 rounded-2xl shadow-xl border border-[#CCA43B]/30 h-full flex flex-col relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+                                <h3 className="text-xl font-bold text-[#202f43] mb-2">Formaliza tu Negocio</h3>
+                                <p className="text-gray-500 text-xs mb-6 h-12">Formaliza de manera rápida, segura y con acompañamiento integral durante todo el proceso.</p>
+
+                                <div className="flex items-baseline gap-1 mb-6">
+                                    <span className="text-3xl font-bold text-[#202f43]">$150.000</span>
+                                </div>
+
+                                <ul className="space-y-3 mb-8 flex-grow">
+                                    {[
+                                        "Constitución de empresa",
+                                        "Inicio de actividades",
+                                        "Verificación de actividades",
+                                        "Verificación de domicilio",
+                                        "Instalación de certificado digital",
+                                        "Habilitación para facturar",
+                                        "Asesoría en boletas electrónicas y facturación",
+                                        "Obtención de E-RUT"
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex items-start gap-2">
+                                            <CheckCircle className="text-[#CCA43B] shrink-0 mt-0.5" size={16} />
+                                            <span className="text-gray-700 font-medium text-xs leading-tight">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+
+                                <Button
+                                    className="w-full bg-[#202f43] text-white hover:bg-[#15202b] py-5 text-sm mt-auto"
+                                    href="https://wa.me/56979567592?text=Hola,%20me%20interesa%20el%20Plan%20Formaliza%20tu%20Negocio%20($150.000)"
+                                >
+                                    Contratar Plan
+                                </Button>
+                            </div>
+                        </FadeIn>
+
                     </div>
                 </div>
             </Section>

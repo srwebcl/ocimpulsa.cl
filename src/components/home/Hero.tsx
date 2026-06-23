@@ -1,30 +1,52 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "../ui/Button";
 import { Section } from "../ui/Section";
 import { CheckCircle, MapPin } from "lucide-react";
-import { HeroForm } from "./HeroForm";
 import { FadeIn } from "../ui/motion/FadeIn";
+import { motion, AnimatePresence } from "framer-motion";
+
+const bgImages = [
+    "/images/tributaria.png",
+    "/images/formaliza.png",
+    "/images/desarrollo-web.png",
+    "/images/contabilidad.png",
+];
 
 export const Hero = () => {
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveIndex((current) => (current + 1) % bgImages.length);
+        }, 6000); // Change image every 6 seconds
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <Section className="relative min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden py-12 lg:py-16">
 
-            {/* Video Background */}
-            <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="absolute min-w-full min-h-full object-cover w-full h-full opacity-60"
-                >
-                    <source src="/images/hero-video.mp4" type="video/mp4" />
-                </video>
+            {/* Image Slideshow Background with Ken Burns */}
+            <div className="absolute inset-0 z-0 w-full h-full overflow-hidden bg-[#15202b]">
+                <AnimatePresence initial={false}>
+                    <motion.img
+                        key={activeIndex}
+                        src={bgImages[activeIndex]}
+                        alt="Background"
+                        initial={{ opacity: 0, scale: 1 }}
+                        animate={{ opacity: 0.6, scale: 1.25 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ 
+                            opacity: { duration: 1.5, ease: "easeInOut" },
+                            scale: { duration: 8, ease: "linear" }
+                        }}
+                        className="absolute inset-0 w-full h-full object-cover origin-center"
+                    />
+                </AnimatePresence>
                 {/* Gradient Overlay for Text Readability - Corporate Navy tint */}
-                <div className="absolute inset-0 bg-[#202f43]/80 mix-blend-multiply"></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#202f43] via-transparent to-[#202f43]/40"></div>
+                <div className="absolute inset-0 bg-[#202f43]/80 mix-blend-multiply pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#202f43] via-transparent to-[#202f43]/40 pointer-events-none"></div>
             </div>
 
             <div className="relative z-10 w-full max-w-4xl mx-auto text-center space-y-6">

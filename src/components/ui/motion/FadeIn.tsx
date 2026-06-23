@@ -10,6 +10,7 @@ interface FadeInProps {
     duration?: number;
     direction?: "up" | "down" | "left" | "right" | "none";
     fullWidth?: boolean;
+    fullHeight?: boolean;
     // Helper to trigger only once
     once?: boolean;
 }
@@ -21,6 +22,7 @@ export const FadeIn = ({
     duration = 0.5,
     direction = "up",
     fullWidth = false,
+    fullHeight = false,
     once = true,
 }: FadeInProps) => {
     const ref = useRef(null);
@@ -41,7 +43,7 @@ export const FadeIn = ({
     const animate = isInView ? { opacity: 1, x: 0, y: 0 } : initial;
 
     return (
-        <div ref={ref} className={fullWidth ? "w-full" : undefined}>
+        <div ref={ref} className={`${fullWidth ? "w-full" : ""} ${fullHeight ? "h-full" : ""}`.trim() || undefined}>
             <motion.div
                 initial={initial}
                 animate={animate}
@@ -50,7 +52,7 @@ export const FadeIn = ({
                     delay,
                     ease: [0.21, 0.47, 0.32, 0.98], // Custom spring-like easing
                 }}
-                className={className}
+                className={`${className} ${fullHeight ? "h-full" : ""}`.trim() || undefined}
             >
                 {children}
             </motion.div>

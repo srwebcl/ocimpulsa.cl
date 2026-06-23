@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Instagram, Linkedin, MapPin, Mail, Phone } from "lucide-react";
+import { Instagram, MapPin, Mail, Phone } from "lucide-react";
 
 export const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -43,9 +43,7 @@ export const Footer = () => {
                             Ingeniería contable para empresas que buscan crecer con bases sólidas.
                         </p>
                         <div className="flex gap-4">
-                            <Link href="#" className="hover:text-[#CCA43B] transition-colors"><Facebook size={20} /></Link>
-                            <Link href="#" className="hover:text-[#CCA43B] transition-colors"><Instagram size={20} /></Link>
-                            <Link href="#" className="hover:text-[#CCA43B] transition-colors"><Linkedin size={20} /></Link>
+                            <a href="https://www.instagram.com/consultoraoc/" target="_blank" rel="noopener noreferrer" className="hover:text-[#CCA43B] transition-colors"><Instagram size={20} /></a>
                         </div>
                     </div>
 
@@ -109,7 +107,7 @@ export const Footer = () => {
                                 <span className="text-yellow-400 text-sm group-hover:scale-125 transition-transform duration-300">⚡</span>
                                 <span>por <span className="font-bold text-gray-300 group-hover:text-white">SRweb</span></span>
                             </a>
-                            <p>&copy; {currentYear} OC Impulsa SpA.</p>
+                            <p>&copy; {currentYear} CONSULTORA OC</p>
                         </div>
 
 
