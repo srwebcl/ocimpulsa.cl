@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { HeroForm } from "./HeroForm";
 import { CheckCircle2, ShieldCheck, Clock, FileCheck, Users, Receipt, Laptop } from "lucide-react";

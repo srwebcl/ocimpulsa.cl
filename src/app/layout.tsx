@@ -7,8 +7,8 @@ import { SmartWhatsAppBtn } from "@/components/ui/SmartWhatsAppBtn";
 import { CookieConsent } from "@/components/ui/CookieConsent";
 import Script from "next/script";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.ocimpulsa.cl'),

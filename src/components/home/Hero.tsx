@@ -45,8 +45,9 @@ export const Hero = () => {
                         alt="Background"
                         fill
                         priority={activeIndex === 0}
+                        fetchPriority={activeIndex === 0 ? "high" : "auto"}
                         sizes="100vw"
-                        quality={85}
+                        quality={75}
                         initial={{ opacity: 0, scale: 1 }}
                         animate={{ opacity: 0.6, scale: 1.25 }}
                         exit={{ opacity: 0 }}
