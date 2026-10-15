@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SmartWhatsAppBtn } from "@/components/ui/SmartWhatsAppBtn";
 import { CookieConsent } from "@/components/ui/CookieConsent";
+import { ConversionTracker } from "@/components/conversion/ConversionTracker";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -97,7 +98,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${outfit.variable} font-sans antialiased`} suppressHydrationWarning>
         <Script
           id="gtm-script"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -112,6 +113,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <SmartWhatsAppBtn />
+        <ConversionTracker />
         <CookieConsent />
       </body>
     </html>

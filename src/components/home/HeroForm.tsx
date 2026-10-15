@@ -6,6 +6,7 @@ import { useInView } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { Button } from "../ui/Button";
 import { cn } from "@/lib/utils";
+import { pushDataLayer } from "@/lib/analytics";
 
 interface HeroFormProps {
     className?: string;
@@ -61,13 +62,10 @@ const HeroFormContent = ({ className, defaultService, lockService }: HeroFormPro
             // Success!!
 
             // Push to DataLayer for Conversion Tracking
-            if (typeof window !== 'undefined') {
-                (window as any).dataLayer = (window as any).dataLayer || [];
-                (window as any).dataLayer.push({
-                    event: 'form_submission_success',
-                    location: 'hero_home'
-                });
-            }
+            pushDataLayer({
+                event: 'form_submission_success',
+                location: 'hero_home'
+            });
 
             // Redirect to Thank You Page
             router.push('/gracias');

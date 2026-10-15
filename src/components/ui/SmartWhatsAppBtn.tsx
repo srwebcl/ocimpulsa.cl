@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { X } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { pushDataLayer } from "@/lib/analytics";
 
 export const SmartWhatsAppBtn = () => {
     const pathname = usePathname();
@@ -34,13 +35,11 @@ export const SmartWhatsAppBtn = () => {
 
     const handleClick = () => {
         // Push GTM Event
-        if (typeof window !== "undefined" && (window as any).dataLayer) {
-            (window as any).dataLayer.push({
-                event: "whatsapp_click",
-                message_content: "Direct WhatsApp Click",
-                page_location: pathname
-            });
-        }
+        pushDataLayer({
+            event: "whatsapp_click",
+            message_content: "Direct WhatsApp Click",
+            page_location: pathname
+        });
 
         const message = "Hola, vengo desde la web y necesito información.";
         const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
