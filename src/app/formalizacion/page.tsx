@@ -38,7 +38,7 @@ export default function FormalizaPage() {
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#CCA43B]/30 bg-[#202f43]/50 backdrop-blur-sm shadow-sm mx-auto">
                             <ShieldCheck className="w-4 h-4 text-[#CCA43B]" />
                             <span className="text-[#CCA43B] text-[10px] md:text-xs font-bold tracking-widest uppercase">
-                                Estructura Legal Sólida
+                                Empieza a Facturar Ya
                             </span>
                         </div>
                     </FadeIn>
@@ -46,9 +46,9 @@ export default function FormalizaPage() {
                     {/* Headline */}
                     <FadeIn delay={0.3} direction="up">
                         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] text-balance">
-                            Crea tu Empresa en <br />
+                            Creamos tu Empresa en un día. <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f4bf6a] via-[#bb8833] to-[#ffff81]">
-                                un solo día.
+                                Primera asesoría sin costo.
                             </span>
                         </h1>
                     </FadeIn>
@@ -56,7 +56,7 @@ export default function FormalizaPage() {
                     {/* Subheadline */}
                     <FadeIn delay={0.5} direction="up">
                         <p className="text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto leading-relaxed">
-                            Olvídate de notarías, filas y trámites eternos. Te entregamos tu empresa <strong>lista para facturar</strong>, con RUT, cuenta bancaria y claves del SII.
+                            Servicio online y cercano en Ovalle, Los Vilos, La Serena, Coquimbo, Vallenar, Copiapó, Caldera y Antofagasta. Contablidad clara, sin sorpresas. <br /> <span className="font-bold text-[#FFFFFF]">Planes desde $39.000</span>
                         </p>
                     </FadeIn>
 

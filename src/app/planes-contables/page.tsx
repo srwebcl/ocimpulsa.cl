@@ -51,7 +51,7 @@ export default function ContabilidadPage() {
 
                     <FadeIn delay={0.5} direction="up">
                         <p className="text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto leading-relaxed">
-                            Planes mensuales que se ajustan a tu etapa. Mantén tu negocio al día con el SII y la Dirección del Trabajo sin pagar de más.
+Mantén tu empresa al día con el SII y la DT. <span className="font-bold text-[#FFFFFF]">Primera asesoría sin costo en el norte.</span>
                         </p>
                     </FadeIn>
 
