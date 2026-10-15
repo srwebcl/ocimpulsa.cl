@@ -15,7 +15,7 @@ export default function FormalizaPage() {
         <main className="min-h-screen flex flex-col bg-[#F4F1EA]">
 
             {/* 1. HERO SECTION (Video BG, Dark, Impactful) */}
-            <Section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20 lg:py-28">
+            <Section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden pt-12 pb-20 lg:pt-16 lg:pb-24">
                 {/* Image Background */}
                 <div className="absolute inset-0 z-0 w-full h-full overflow-hidden">
                     <Image
@@ -32,7 +32,7 @@ export default function FormalizaPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#202f43] via-transparent to-[#202f43]/40"></div>
                 </div>
 
-                <div className="relative z-10 w-full max-w-4xl mx-auto text-center space-y-8">
+                <div className="relative z-10 w-full max-w-4xl mx-auto text-center space-y-6 md:space-y-7 -mt-4 md:-mt-8">
                     {/* Badge */}
                     <FadeIn delay={0.1} direction="down">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#CCA43B]/30 bg-[#202f43]/50 backdrop-blur-sm shadow-sm mx-auto">
@@ -45,7 +45,7 @@ export default function FormalizaPage() {
 
                     {/* Headline */}
                     <FadeIn delay={0.3} direction="up">
-                        <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] text-balance">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.15] text-balance">
                             Creamos tu Empresa en un día. <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#f4bf6a] via-[#bb8833] to-[#ffff81]">
                                 Primera asesoría sin costo.
@@ -55,14 +55,14 @@ export default function FormalizaPage() {
 
                     {/* Subheadline */}
                     <FadeIn delay={0.5} direction="up">
-                        <p className="text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-base sm:text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto leading-relaxed">
                             Servicio online y cercano en Ovalle, Los Vilos, La Serena, Coquimbo, Vallenar, Copiapó, Caldera y Antofagasta. Contablidad clara, sin sorpresas. <br /> <span className="font-bold text-[#FFFFFF]">Planes desde $39.000</span>
                         </p>
                     </FadeIn>
 
                     {/* CTAs */}
                     <FadeIn delay={0.7} direction="up">
-                        <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+                        <div className="flex flex-col sm:flex-row gap-4 pt-2 justify-center">
                             <Button
                                 variant="secondary"
                                 size="lg"
@@ -84,7 +84,7 @@ export default function FormalizaPage() {
 
                     {/* Trust Signals */}
                     <FadeIn delay={0.9} direction="up">
-                        <div className="flex flex-wrap gap-y-3 gap-x-8 text-sm text-gray-400 font-medium justify-center pt-8">
+                        <div className="flex flex-wrap gap-y-3 gap-x-8 text-sm text-gray-400 font-medium justify-center pt-4 md:pt-6">
                             <div className="flex items-center gap-2">
                                 <BadgeCheck className="w-5 h-5 text-[#CCA43B]" />
                                 <span>100% Online</span>
