@@ -56,7 +56,7 @@ export default function FormalizaPage() {
                     {/* Subheadline */}
                     <FadeIn delay={0.5} direction="up">
                         <p className="text-base sm:text-lg md:text-xl text-gray-200 font-light max-w-2xl mx-auto leading-relaxed">
-                            Servicio online y cercano en Ovalle, Los Vilos, La Serena, Coquimbo, Vallenar, Copiapó, Caldera y Antofagasta. Contablidad clara, sin sorpresas. <br /> <span className="font-bold text-[#FFFFFF]">Planes desde $39.000</span>
+                            Servicio online y cercano en Ovalle, Los Vilos, La Serena, Coquimbo, Vallenar, Copiapó, Caldera y Antofagasta.
                         </p>
                     </FadeIn>
 
